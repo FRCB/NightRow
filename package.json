@@ -1,0 +1,39 @@
+{
+  "name": "perso",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.13.1",
+    "google-maps-react": "^1.1.0",
+    "lodash": "^4.17.10",
+    "massive": "^5.0.0",
+    "passport": "^0.4.0",
+    "passport-auth0": "^0.6.1",
+    "prop-types": "^15.6.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-stripe-elements": "^2.0.0",
+    "redux": "^4.0.0",
+    "redux-promise-middleware": "^5.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "google-maps": "^3.2.1"
+  },
+  "proxy": "http://localhost:3666",
+  "main": "./server/index.js"
+}

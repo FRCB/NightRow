@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:700|Roboto:300');
+
+header {
+    z-index: 0;
+    display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+    align-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid grey;
+    height: 9vh;
+}
+
+#logo {
+    padding-left: 5%;
+    padding-top: 1%;
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1em;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.button-menu {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    background: none;
+    padding-left: 5%;
+}
+
+.leftie {
+    display: none;
+}
+
+.header-box {
+    margin: 0 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+button {
+    border: none;
+}

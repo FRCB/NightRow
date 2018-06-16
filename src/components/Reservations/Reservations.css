@@ -1,0 +1,53 @@
+.reservation-flex {
+   display: flex; 
+}
+
+.left-block {
+    margin: 0;
+    background: linear-gradient(to bottom right, #37bdcc, #2f3483);
+    padding: 10% 4%;
+    height: 50vh;
+}
+
+.reservation-title {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-size: 1em;
+    flex-wrap: wrap;
+    padding-bottom: 20%;
+    color: white;
+}
+
+.profile-image {
+    border-radius: 100%;
+    width: 13vw;
+    height: 25vh;
+}
+
+.right-block {
+    margin: 0; 
+    background-color: whitesmoke;
+    width:100%;
+}
+
+.reserved-event {
+    text-align: left;
+    color: grey;
+    padding: 0% 4%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    border-bottom: 1px solid grey;
+}
+
+.alert {
+    font-family: 'Orbitron', sans-serif;
+    align-items: center;
+    font-size: 1.3em;
+    margin: 0;
+    padding-top: 1.5%;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: #53aeaf;
+}

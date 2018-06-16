@@ -1,0 +1,24 @@
+.event-border {
+    border-bottom: solid grey 1px;
+    padding: 1% 0;
+}
+
+.list-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: grey;
+    margin: 0;
+    }
+
+.list-content {
+    padding-left: 3%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-size: 1.1em;
+    color: grey;
+}
+
+.detailedInfo {
+    display: none;
+}
