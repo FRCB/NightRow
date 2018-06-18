@@ -36,16 +36,16 @@ class Homepage extends Component {
                         {this.state.toggle
                             ?
                             <div className='smooth'>
-                                <ul>
+                                <ul className='menu-list'>
                                     <li>
-                                        <button>
+                                        <button className='list-font'>
                                             Search
                                         </button>
                                     </li>
 
                                     <Link to='/reservations' >
                                         <li>
-                                            <button>
+                                            <button className='list-font'>
                                                 Reservations
                                             </button>
                                         </li>
@@ -54,13 +54,13 @@ class Homepage extends Component {
                                     <li>
                                         {user_name ? (
                                             <a href="http://localhost:3666/auth/logout">
-                                                <button>
+                                                <button className='list-font'>
                                                     Logout
                                                 </button>
                                             </a>
                                         ) : (
                                                 <a href={process.env.REACT_APP_LOGIN}>
-                                                    <button>
+                                                    <button className='list-font'>
                                                         Login
                                                     </button>
                                                 </a>
