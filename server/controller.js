@@ -14,9 +14,9 @@ module.exports = {
 
     createEvent: (req, res) => {
         const db = req.app.get('db');
-        const { category, title, date, time, address, about, contact, price } = req.body
+        const { category, title, date, time, address, about, contact, price, lat, lng } = req.body
 
-        db.create_event([category, title, date, time, address, about, contact, price])
+        db.create_event([category, title, date, time, address, about, contact, price, lat, lng])
             .then(event => res.status(200).send(event))
             .catch((err) => {
                 console.log(err)
@@ -40,9 +40,9 @@ module.exports = {
         console.log(req.body)
         const db = req.app.get('db');
         const id = req.params.id;
-        const { title, date, time, address, about, contact, price } = req.body
+        const { title, date, time, address, about, contact, price, lat, lng } = req.body
 
-        db.edit_event([title, date, time, address, about, contact, price, id])
+        db.edit_event([title, date, time, address, about, contact, price, lat, lng, id])
             .then(event => res.status(200).send(event))
             .catch((err) => {
                 console.log(err)

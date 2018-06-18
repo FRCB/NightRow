@@ -5,8 +5,10 @@ SET event_title = $1,
     event_address = $4,
     event_about = $5,
     event_contact = $6,
-    event_price = $7
-WHERE event_id = $8;
+    event_price = $7,
+    event_lat = $8,
+    event_lng = $9
+WHERE event_id = $10;
 SELECT *
 FROM events
-WHERE event_id = $8;
+WHERE event_id = $10;

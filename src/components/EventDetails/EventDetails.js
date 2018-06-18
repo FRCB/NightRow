@@ -16,7 +16,9 @@ export default class EventDetails extends Component {
             editAddress: '',
             editAbout: '',
             editContact: '',
-            editPrice: ''
+            editPrice: '',
+            editLat: '',
+            editLng: ''
         }
 
         this.getEvent = this.getEvent.bind(this)
@@ -32,7 +34,7 @@ export default class EventDetails extends Component {
         axios.get(`/auth/user`).then((res) => this.setState({ user: res.data }))
     }
 
-    getEvent(title, date, time, address, about, contact, price) {
+    getEvent(title, date, time, address, about, contact, price, lat, lng) {
         const body = {
             title: title,
             date: date,
@@ -40,7 +42,9 @@ export default class EventDetails extends Component {
             address: address,
             about: about,
             contact: contact,
-            price: price
+            price: price,
+            lat: lat,
+            lng: lng
         }
         axios.get(`/api/event/${this.props.match.params.id}`, body)
             .then((res) => this.setState({
@@ -52,18 +56,23 @@ export default class EventDetails extends Component {
                 editAddress: res.data[0].event_address,
                 editAbout: res.data[0].event_about,
                 editContact: res.data[0].event_contact,
-                editPrice: res.data[0].event_price
+                editPrice: res.data[0].event_price,
+                editLat: res.data[0].event_lat,
+                editLng: res.data[0].event_lng
             }))
     }
 
     toggleEdit() {
         if (this.state.toggleBtn) {
-            this.editEvent(this.state.editTitle, this.state.editDate, this.state.editTime, this.state.editAddress, this.state.editAbout, this.state.editContact, this.state.editPrice)
+            this.editEvent(
+                this.state.editTitle, this.state.editDate, this.state.editTime, this.state.editAddress, this.state.editAbout, this.state.editContact, this.state.editPrice,
+                this.state.editLat,
+                this.state.editLng)
         }
         this.setState({ toggleBtn: !this.state.toggleBtn })
     }
 
-    editEvent(title, date, time, address, about, contact, price) {
+    editEvent(title, date, time, address, about, contact, price, lat, lng) {
         const body = {
             title: title,
             date: date,
@@ -71,7 +80,9 @@ export default class EventDetails extends Component {
             address: address,
             about: about,
             contact: contact,
-            price: price
+            price: price,
+            lat: lat,
+            lng: lng
         }
         axios.put(`/api/event/${this.props.match.params.id}`, body)
             .then(res => {
@@ -82,7 +93,9 @@ export default class EventDetails extends Component {
                     editAddress: res.data[0].event_address,
                     editAbout: res.data[0].event_about,
                     editContact: res.data[0].event_contact,
-                    editPrice: res.data[0].event_price
+                    editPrice: res.data[0].event_price,
+                    editLat: res.data[0].event_lat,
+                    editLng: res.data[0].event_lng
                 })
             })
             .then(this.getEvent())
@@ -109,7 +122,6 @@ export default class EventDetails extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <div>
@@ -127,6 +139,8 @@ export default class EventDetails extends Component {
                                 <hr />
                                 <p>{this.state.editContact}</p>
                                 <p>{this.state.editPrice}</p>
+                                <p>{this.state.editLat}</p>
+                                <p>{this.state.editLng}</p>
                             </div>
                             :
                             <div>
@@ -151,6 +165,12 @@ export default class EventDetails extends Component {
                                 <input
                                     value={this.state.editPrice}
                                     onChange={(e) => this.setState({ editPrice: e.target.value })} />
+                                <input
+                                    value={this.state.editLat}
+                                    onChange={(e) => this.setState({ editLat: e.target.value })} />
+                                <input
+                                    value={this.state.editLng}
+                                    onChange={(e) => this.setState({ editLng: e.target.value })} />
                             </div>
                     }
                     <hr />

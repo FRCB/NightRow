@@ -14,7 +14,9 @@ export default class AddEvent extends Component {
             address: '',
             about: '',
             contact: '',
-            price: ''
+            price: '',
+            lat: '',
+            lng: ''
         }
 
         this.createEvent = this.createEvent.bind(this)
@@ -34,7 +36,9 @@ export default class AddEvent extends Component {
                 address: '',
                 about: '',
                 contact: '',
-                price: ''
+                price: '',
+                lat: '',
+                lng: ''
             }))
     }
 
@@ -94,6 +98,18 @@ export default class AddEvent extends Component {
                     placeholder='Price'
                     onChange={(e) => this.setState({ price: e.target.value })} />
                 <br />
+                <p>Latitude (map)</p>
+                <input
+                    type="text"
+                    placeholder='Latitude'
+                    onChange={(e) => this.setState({ lat: e.target.value })} />
+                <br />
+                <p>Longitude (map)</p>
+                <input
+                    type="text"
+                    placeholder='Longitude'
+                    onChange={(e) => this.setState({ lng: e.target.value })} />
+                <br />
                 <hr />
                 <Link to='/'>
                     <button
@@ -101,7 +117,6 @@ export default class AddEvent extends Component {
                         Complete
                 </button>
                 </Link>
-                <br />
             </div>
         )
     }

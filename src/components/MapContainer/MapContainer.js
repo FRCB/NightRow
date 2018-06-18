@@ -88,9 +88,10 @@ class Contents extends Component {
     let mappedMarkers = this.props.events.map((location, i) => {
       return (
         <Marker
+          key={i}
           onClick={this.onMarkerClick}
           name={location.event_title}
-          position={{ lat: location.event_lat, lng: location.event_long }}
+          position={{ lat: location.event_lat, lng: location.event_lng }}
         />
       )
     })
