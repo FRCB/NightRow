@@ -23,25 +23,23 @@ export default class Homepage extends Component {
 
 
                 <main className='cat-flex hover'>
-                    <Link to='/category/outdoor'>
-                        <button className='cat-box cat-1'>
-                            OUTDOOR
-                    </button>
+
+                    <Link
+                        to='/category/outdoor'
+                        className='cat-box cat-1'>
+                        OUTDOOR
                     </Link>
-                    <Link to='/category/afterwork'>
-                        <button className='cat-box cat-2'>
-                            AFTERWORK
-                    </button>
+                    <Link to='/category/afterwork'
+                        className='cat-box cat-2'>
+                        AFTERWORK
                     </Link>
-                    <Link to='/category/clubbing'>
-                        <button className='cat-box cat-3'>
-                            CLUBBING
-                    </button>
+                    <Link to='/category/clubbing'
+                        className='cat-box cat-3'>
+                        CLUBBING
                     </Link>
-                    <Link to='/category/live'>
-                        <button className='cat-box cat-4'>
-                            LIVE
-                    </button>
+                    <Link to='/category/live'
+                        className='cat-box cat-4'>
+                        LIVE
                     </Link>
                 </main>
 
