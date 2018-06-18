@@ -29,7 +29,7 @@ class Homepage extends Component {
 
                     <menu>
                         <button
-                            className='button-menu'
+                            className='toggle-button'
                             onClick={() => this.toggleEdit()}>
                             MENU
                         </button>

@@ -6,7 +6,7 @@ export default class Homepage extends Component {
 
     render() {
         return (
-            <div>
+            <div className='homepage'>
 
                 <h2 className='promise'>
                     FIND AND RESERVE
