@@ -10,7 +10,7 @@ class Reservations extends Component {
         super(props);
 
         this.state = {
-            reservations: [],
+            reservations: []
         }
 
         this.getReservations = this.getReservations.bind(this)
@@ -70,7 +70,9 @@ class Reservations extends Component {
                         </div>
                     ) : (
                             <div>
-                                <p className='alert'>Please, login in order to be redirected to your reservations</p>.
+                                <p className='alert'>
+                                    Please, login in order to be redirected to your reservations.
+                                </p>
                                 <Homepage />
                             </div>
                         )

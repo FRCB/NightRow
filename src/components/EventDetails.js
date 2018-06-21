@@ -163,31 +163,48 @@ export default class EventDetails extends Component {
                                 </p>
                             </div>
                             :
-                            <div>
+                            <div className='edit-box'>
+                                <p>Title</p>
                                 <input
                                     value={this.state.editTitle}
                                     onChange={(e) => this.setState({ editTitle: e.target.value })} />
+                                <br />
+                                <p>Date</p>
                                 <input
                                     value={this.state.editDate}
                                     onChange={(e) => this.setState({ editDate: e.target.value })} />
+                                <br />
+                                <p>Time</p>
                                 <input
                                     value={this.state.editTime}
                                     onChange={(e) => this.setState({ editTime: e.target.value })} />
-                                <input
+                                <br />
+                                <p>Address</p>
+                                <textarea
                                     value={this.state.editAddress}
                                     onChange={(e) => this.setState({ editAddress: e.target.value })} />
-                                <input
+                                <br />
+                                <p>About</p>
+                                <textarea
                                     value={this.state.editAbout}
                                     onChange={(e) => this.setState({ editAbout: e.target.value })} />
+                                <br />
+                                <p>Contact</p>
                                 <input
                                     value={this.state.editContact}
                                     onChange={(e) => this.setState({ editContact: e.target.value })} />
+                                <br />
+                                <p>Price</p>
                                 <input
                                     value={this.state.editPrice}
                                     onChange={(e) => this.setState({ editPrice: e.target.value })} />
+                                <br />
+                                <p>Latitude</p>
                                 <input
                                     value={this.state.editLat}
                                     onChange={(e) => this.setState({ editLat: e.target.value })} />
+                                <br />
+                                <p>Longitude</p>
                                 <input
                                     value={this.state.editLng}
                                     onChange={(e) => this.setState({ editLng: e.target.value })} />

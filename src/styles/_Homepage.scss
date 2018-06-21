@@ -2,6 +2,8 @@
 .promise {
     background-image: url(https://i.imgur.com/kZn7d4b.jpg);
 	background-size: 100% auto;
+	top: 0;
+	font-weight: 300;
 	margin-top: 23%;
 	height: 20%;
 	padding: 10% 0;
@@ -20,7 +22,9 @@
 .verticalFlip{
 	margin: 5%;
 	display: flex;
-    justify-content: center;
+	justify-content: center;
+	font-weight: 300;
+	width: 100%;
 }
 .verticalFlip span{
 	animation: vertical 12.5s linear infinite 0s;
@@ -28,7 +32,8 @@
 	-webkit-animation: vertical 12.5s linear infinite 0s;
 	opacity: 0;
     overflow: hidden;
-    position: absolute;
+	position: absolute;
+	align-content: center;
 }
 .verticalFlip span:nth-child(2){
 	animation-delay: 2.5s;
