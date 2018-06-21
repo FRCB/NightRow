@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './Header.css'
+import './../styles/_Header.scss'
+
 
 class Homepage extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            toggle: false
+            toggle: false,
+            toggleMenu: false
         }
     }
 
     toggleEdit() {
-        this.setState({ toggle: !this.state.toggle })
+        this.setState({ toggle: !this.state.toggle, toggleMenu: !this.state.toggleMenu })
     }
 
 
@@ -28,11 +30,16 @@ class Homepage extends Component {
                     </Link>
 
                     <menu>
+
                         <button
-                            className='toggle-button'
+                            className='hamburger hamburger--squeeze is-active'
+                            type='button'
                             onClick={() => this.toggleEdit()}>
-                            MENU
+                            <span className='hamburger-box'>
+                                <span className='hamburger-inner'></span>
+                            </span>
                         </button>
+
                         {this.state.toggle
                             ?
                             <div className='smooth'>

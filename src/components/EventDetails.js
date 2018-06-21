@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './EventDetails.css';
 import axios from 'axios';
 
 export default class EventDetails extends Component {

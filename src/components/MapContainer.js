@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 import Map, { InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-import './MapContainer.css';
 
 class Contents extends Component {
   constructor(props) {

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:700|Roboto:300');
+
+@import "./styles/Category.scss";
+@import "./styles/Event.scss";
+@import "./styles/EventDetails.scss";
+@import "./styles/Hamburgers.scss";
+@import "./styles/Header.scss";
+@import "./styles/Homepage.scss";
+@import "./styles/MapContainer.scss";
+@import "./styles/Reservation.scss";
+@import "./styles/Reservations.scss";
+
+
+.App {
+  position: flex;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+}
+
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */

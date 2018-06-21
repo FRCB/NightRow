@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Homepage from "./../Homepage/Homepage";
-import Reservation from "./../Reservation/Reservation";
-import { getUser } from './../../redux/reducer';
+import Homepage from './Homepage';
+import Reservation from './Reservation'
+import { getUser } from './../redux/reducer';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import './Reservations.css';
 
 class Reservations extends Component {
     constructor(props) {
