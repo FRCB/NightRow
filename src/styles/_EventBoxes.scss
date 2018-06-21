@@ -1,0 +1,41 @@
+.each-box {
+
+    a {
+        text-decoration: none;
+    }
+    
+    p {
+        font-family: Orbitron, sans-serif;
+        font-size: 11px;
+        color: grey;
+    }
+    h6 {
+        margin: 0;
+        padding : 0;
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 12px;
+        color: grey;
+    }
+}
+
+.add-button {
+    font-family: Orbitron, sans-serif;
+    font-size: 10px;
+    color: grey;
+    float:right;
+}
+
+.delete-button {
+    font-family: Orbitron, sans-serif;
+    font-size: 10px;
+    color: grey;
+    float:right;
+}
+
+.pay-button {
+    font-family: Orbitron, sans-serif;
+    font-size: 10px;
+    color: grey;
+    float:left;
+}

@@ -7,31 +7,31 @@ export default class Event extends Component {
 
         return (
             <div>
-                <Link to={`/event/${this.props.event.event_id}`}>
-                    <div className='event-border'>
+                <Link style={{ textDecoration: 'none' }} to={`/event/${this.props.event.event_id}`}>
+                    <div className='each-box'>
                         <div>
-                            <p className='list-title'>Event :
-                            <p className='list-content'>{this.props.event.event_title} </p>
+                            <p>Event :
+                            <h6>{this.props.event.event_title} </h6>
                             </p>
                         </div>
                         <div>
-                            <p className='list-title'>Date :
-                            <p className='list-content'>{this.props.event.event_date} </p>
+                            <p>Date :
+                            <h6>{this.props.event.event_date} </h6>
                             </p>
                         </div>
                         <div>
-                            <p className='list-title'>Time :
-                            <p className='list-content'>{this.props.event.event_time} </p>
+                            <p>Time :
+                            <h6>{this.props.event.event_time} </h6>
                             </p>
                         </div>
                         <div>
-                            <p className='list-title'>Price :
-                            <p className='list-content'>{this.props.event.event_price} </p>
+                            <p>Price :
+                            <h6>{this.props.event.event_price} </h6>
                             </p>
                         </div>
                     </div>
                 </Link>
-            </div>
+            </div >
         );
     }
 }

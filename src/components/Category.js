@@ -57,7 +57,7 @@ class Category extends Component {
                     <div className='event-box'>
                         {mappedEvents}
                         <Link to='/add'>
-                            <button>
+                            <button className='add-button'>
                                 Add an Event
                             </button>
                         </Link>

@@ -35,21 +35,30 @@ header {
 }
 
 .menu-list {
-    position: fixed;
-    font-size: 1.5em;
-    width: 40%;
+    position: absolute;
+    right: 0;
+    margin: 5vh 0;
+    padding: 10px;
+    font-size: 2em;
     background: white;
     list-style: none;
-    margin-top: 5%;
-    padding-left: 2px;
-    padding-top: 10px;
-    opacity: 0.8;
+    opacity: 0.9;
+    border-radius: 5%;
+    li {
+        margin: -4px;
+        padding-right: 10px;
+        padding-left: 5px;
+        text-align: right;
+    }
+    a {
+        font-family: 'Orbitron', sans-serif;
+        color: #636170;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
 }
 
-.list-font {
-    font-family: 'Orbitron', sans-serif;
-    padding: 10px 0;
-}
 
 .leftie {
     display: none;

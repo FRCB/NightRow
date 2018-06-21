@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './../styles/_Header.scss'
 
 
 class Homepage extends Component {
@@ -29,11 +28,10 @@ class Homepage extends Component {
                         <h1>Night Row</h1>
                     </Link>
 
-                    <menu>
+                    <menu className='burger-menu'>
 
                         <button
-                            className='hamburger hamburger--squeeze is-active'
-                            type='button'
+                            className='hamburger hamburger--squeeze'
                             onClick={() => this.toggleEdit()}>
                             <span className='hamburger-box'>
                                 <span className='hamburger-inner'></span>
@@ -45,32 +43,20 @@ class Homepage extends Component {
                             <div className='smooth'>
                                 <ul className='menu-list'>
                                     <li>
-                                        <button className='list-font'>
-                                            Search
-                                        </button>
+                                        <Link to='/reservations' >
+                                            Reservations
+                                        </Link>
                                     </li>
 
-                                    <Link to='/reservations' >
-                                        <li>
-                                            <button className='list-font'>
-                                                Reservations
-                                            </button>
-                                        </li>
-                                    </Link>
-
-                                    <li>
+                                    <li className='menu-font'>
                                         {user_name ? (
                                             <a href="http://localhost:3666/auth/logout">
-                                                <button className='list-font'>
-                                                    Logout
-                                                </button>
+                                                Logout
                                             </a>
                                         ) : (
                                                 <a href={process.env.REACT_APP_LOGIN}>
-                                                    <button className='list-font'>
-                                                        Login
-                                                    </button>
-                                                </a>
+                                                    Login
+                                            </a>
                                             )}
                                     </li>
                                 </ul>
@@ -82,10 +68,7 @@ class Homepage extends Component {
                     </menu>
 
                     <div className='leftie' >
-                        <input
-                            className='header-box search'
-                            type='text'
-                            placeholder='Search' />
+
                         <Link to='/reservations' >
                             <button className='header-box'>
                                 Reservations
@@ -108,8 +91,8 @@ class Homepage extends Component {
                                 )}
                         </div>
                     </div>
-                </header>
-            </div>
+                </header >
+            </div >
         )
     }
 }

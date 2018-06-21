@@ -4,36 +4,36 @@ export default function Reservation(props) {
 
     return (
         <div>
-            <div >
+            <div className='each-box' >
                 <div>
                     <p >Event :
-                    <p>{props.reservation.event_title} </p>
+                    <h6>{props.reservation.event_title} </h6>
                     </p>
                 </div>
                 <div>
                     <p>Date :
-                    <p>{props.reservation.event_date} </p>
+                    <h6>{props.reservation.event_date} </h6>
                     </p>
                 </div>
                 <div>
                     <p>Time :
-                    <p>{props.reservation.event_time} </p>
+                    <h6>{props.reservation.event_time} </h6>
                     </p>
                 </div>
                 <div>
                     <p>Address :
-                    <p>{props.reservation.event_address} </p>
+                    <h6>{props.reservation.event_address} </h6>
                     </p>
                 </div>
                 <div>
                     <p>Price :
-                    <p>{props.reservation.event_price} </p>
+                    <h6>{props.reservation.event_price} </h6>
                     </p>
                 </div>
-                <button
+                <button className='delete-button'
                     onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
                     Delete
-                    </button>
+                </button>
             </div>
         </div>
     );
