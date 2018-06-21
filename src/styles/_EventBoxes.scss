@@ -1,4 +1,9 @@
+
 .each-box {
+    background-color: whitesmoke;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 5%;
 
     a {
         text-decoration: none;
@@ -19,11 +24,46 @@
     }
 }
 
+.complete-button {
+    font-family: Orbitron, sans-serif;
+    font-size: 14px;
+    color: #2f3483;
+    float:right;
+    margin-right: 5%;
+}
+
+.reserve-button {
+    font-family: Orbitron, sans-serif;
+    font-size: 14px;
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+.delete-button-2 {
+    font-family: Orbitron, sans-serif;
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.edit-button {
+    font-family: Orbitron, sans-serif;
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
 .add-button {
     font-family: Orbitron, sans-serif;
     font-size: 10px;
     color: grey;
     float:right;
+    margin-right: 5%;
 }
 
 .delete-button {
@@ -31,6 +71,7 @@
     font-size: 10px;
     color: grey;
     float:right;
+    margin-right: 5%;
 }
 
 .pay-button {
@@ -39,3 +80,4 @@
     color: grey;
     float:left;
 }
+

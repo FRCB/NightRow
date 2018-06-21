@@ -127,19 +127,40 @@ export default class EventDetails extends Component {
                     {
                         !this.state.toggleBtn
                             ?
-                            <div>
+                            <div className='show-details'>
                                 <h1>{this.state.editTitle}</h1>
                                 <hr />
-                                <p>{this.state.editDate}</p>
-                                <p>{this.state.editTime}</p>
-                                <p>{this.state.editAddress}</p>
+                                <p>
+                                    Date
+                                    <h6>{this.state.editDate}</h6>
+                                </p>
+                                <p>
+                                    Time
+                                    <h6>{this.state.editTime}</h6>
+                                </p>
+                                <p>
+                                    Address
+                                    <h6>{this.state.editAddress}</h6>
+                                </p>
                                 <hr />
-                                <p>{this.state.editAbout}</p>
+                                <p>
+                                    About
+                                    <h6>{this.state.editAbout}</h6>
+                                </p>
                                 <hr />
-                                <p>{this.state.editContact}</p>
-                                <p>{this.state.editPrice}</p>
-                                <p>{this.state.editLat}</p>
-                                <p>{this.state.editLng}</p>
+                                <p>
+                                    Contact
+                                    <h6>{this.state.editContact}</h6>
+                                </p>
+                                <p>
+                                    Price
+                                    <h6>{this.state.editPrice}</h6>
+                                </p>
+                                <hr />
+                                <p>Latitude & Longitude
+                                    <h6>{this.state.editLat}</h6>
+                                    <h6>{this.state.editLng}</h6>
+                                </p>
                             </div>
                             :
                             <div>
@@ -172,17 +193,23 @@ export default class EventDetails extends Component {
                                     onChange={(e) => this.setState({ editLng: e.target.value })} />
                             </div>
                     }
-                    <hr />
+
                     <button
+                        className='reserve-button'
                         onClick={this.createReservation}>
                         Reserve
                     </button>
                     <br />
+
                     <button
+                        className='delete-button-2'
                         onClick={() => this.deleteEvent(this.state.eventId)}>
                         Delete
                     </button>
+                    <br />
+
                     <button
+                        className='edit-button'
                         onClick={() => this.toggleEdit()}>
                         {this.state.toggleBtn ? "Save" : "Edit"}
                     </button>

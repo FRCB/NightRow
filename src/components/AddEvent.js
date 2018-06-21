@@ -45,11 +45,12 @@ export default class AddEvent extends Component {
     render() {
 
         return (
-            <div>
+            <div className='add-event-page'>
                 <p>Category</p>
                 <select
                     name='category'
                     onChange={(e) => this.setState({ category: e.target.value })}>
+                    <option value=''>-</option>
                     <option value='1'>Outdoor</option>
                     <option value='2'>Afterwork</option>
                     <option value='3'>Clubbing</option>
@@ -110,11 +111,11 @@ export default class AddEvent extends Component {
                     placeholder='Longitude'
                     onChange={(e) => this.setState({ lng: e.target.value })} />
                 <br />
-                <hr />
                 <Link to='/'>
                     <button
+                        className='complete-button'
                         onClick={this.createEvent}>
-                        Complete
+                        COMPLETE
                 </button>
                 </Link>
             </div>

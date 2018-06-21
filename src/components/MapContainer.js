@@ -100,23 +100,25 @@ class Contents extends Component {
         <div>
           <form>
             <input
+              style={{ fontSize: 11 }}
               ref='autocomplete'
               type="text"
               placeholder="Enter a location" />
             <input
               type='submit'
+              style={{ fontFamily: 'Orbitron', color: 'grey' }}
               value='Go' />
           </form>
-          <div>
+          {/* <div>
             <div>Lat: {position && position.lat()}</div>
             <div>Lng: {position && position.lng()}</div>
-          </div>
+          </div> */}
         </div>
         <div >
           <Map {...props}
             containerStyle={{
               position: 'relative',
-              height: '80vh',
+              height: '50vh',
               width: '100%'
             }}
             center={this.state.position}

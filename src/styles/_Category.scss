@@ -1,12 +1,12 @@
 .category-flex {
-    display: flex; 
+    display: flex;
+    flex-direction: column;
  }
  
  .event-block {
     margin-top: 23%;
     background-color: white;
-    width: 50vw;
-    height: 86vh;
+    width: 100%;
  }
  
  .event-box {

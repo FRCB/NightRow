@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron:700|Roboto:300");
 .category-flex {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 .event-block {
   margin-top: 23%;
   background-color: white;
-  width: 50vw;
-  height: 86vh; }
+  width: 100%; }
 
 .event-box {
   text-align: left;
@@ -32,6 +32,28 @@
 
 .detailedInfo {
   display: none; }
+
+.show-details {
+  margin: 25% 5% 0 5%;
+  padding: 8px;
+  background-color: whitesmoke;
+  border-radius: 5%; }
+  .show-details h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: #37bdcc;
+    margin-bottom: 0; }
+  .show-details p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    color: #2f3483; }
+  .show-details h6 {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    color: grey; }
 
 .burger-menu {
   margin-right: 15vw; }
@@ -256,38 +278,72 @@ header {
   height: 15vh; }
 
 .map-block {
-  width: 50%;
+  width: 100%;
   min-height: 200px;
   height: 100%;
-  border-left: solid grey 1px; }
+  border-top: solid grey 1px; }
 
-.each-box a {
-  text-decoration: none; }
+.each-box {
+  background-color: whitesmoke;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 5%; }
+  .each-box a {
+    text-decoration: none; }
+  .each-box p {
+    font-family: Orbitron, sans-serif;
+    font-size: 11px;
+    color: grey; }
+  .each-box h6 {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 12px;
+    color: grey; }
 
-.each-box p {
+.complete-button {
   font-family: Orbitron, sans-serif;
-  font-size: 11px;
-  color: grey; }
+  font-size: 14px;
+  color: #2f3483;
+  float: right;
+  margin-right: 5%; }
 
-.each-box h6 {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 12px;
-  color: grey; }
+.reserve-button {
+  font-family: Orbitron, sans-serif;
+  font-size: 14px;
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 100%; }
+
+.delete-button-2 {
+  font-family: Orbitron, sans-serif;
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 5px;
+  width: 100%; }
+
+.edit-button {
+  font-family: Orbitron, sans-serif;
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 5px;
+  width: 100%; }
 
 .add-button {
   font-family: Orbitron, sans-serif;
   font-size: 10px;
   color: grey;
-  float: right; }
+  float: right;
+  margin-right: 5%; }
 
 .delete-button {
   font-family: Orbitron, sans-serif;
   font-size: 10px;
   color: grey;
-  float: right; }
+  float: right;
+  margin-right: 5%; }
 
 .pay-button {
   font-family: Orbitron, sans-serif;
@@ -339,6 +395,23 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   color: #53aeaf; }
+
+.add-event-page {
+  margin-top: 23%;
+  margin-left: 5%; }
+  .add-event-page p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    color: #37bdcc;
+    margin-bottom: 0; }
+  .add-event-page select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: grey; }
+  .add-event-page input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: grey; }
 
 .App {
   position: flex;
