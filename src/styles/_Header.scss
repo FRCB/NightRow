@@ -70,14 +70,25 @@ header {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
         text-transform: uppercase;
+        border: none;
+        background: transparent;
     }
 }
 
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
+@media(min-device-width : 641px) 
 {
+    header {
+       h1 {
+           font-size: 40px;
+       }
+    }
+    menu {
+        button {
+            display: none;
+        }
+
+    }
     .menu-wrapper {
         display: none
     }
@@ -86,5 +97,20 @@ and (max-device-width : 1024px)
         display: flex;
         margin: auto 1%;
     }
+    }
 
+
+@media (min-width:1025px) {
+
+    header {
+        padding-top: 1%;
+        
+
+        h1 {
+            font-size: 58px;
+        }
+     }
+    .menu-wrapper {
+        display: none
+    }
 }

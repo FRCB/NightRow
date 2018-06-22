@@ -192,19 +192,32 @@ header {
     margin: 0 40px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border: none;
+    background: transparent; }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media (min-device-width: 641px) {
+  header h1 {
+    font-size: 40px; }
+  menu button {
+    display: none; }
   .menu-wrapper {
     display: none; }
   .leftie {
     display: flex;
     margin: auto 1%; } }
 
+@media (min-width: 1025px) {
+  header {
+    padding-top: 1%; }
+    header h1 {
+      font-size: 58px; }
+  .menu-wrapper {
+    display: none; } }
+
 .promise {
   background-image: url(https://i.imgur.com/kZn7d4b.jpg);
   background-size: 100% auto;
-  top: 0;
   font-weight: 300;
   margin-top: 23%;
   height: 20%;
@@ -232,7 +245,6 @@ header {
   -ms-animation: vertical 12.5s linear infinite 0s;
   -webkit-animation: vertical 12.5s linear infinite 0s;
   opacity: 0;
-  overflow: hidden;
   position: absolute;
   align-content: center; }
 
@@ -354,7 +366,7 @@ header {
 .cat-4 {
   background-image: url("./images/live.png"); }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media (min-device-width: 641px) {
   .promise {
     margin-top: 13%;
     letter-spacing: 0.3rem;
@@ -362,6 +374,16 @@ header {
   .cat-box {
     width: 45%;
     font-size: 26px; } }
+
+@media (min-width: 1025px) {
+  .promise {
+    margin-top: 9%;
+    padding: 7% 0 6% 0;
+    line-height: 15%;
+    font-size: 3em; }
+  .cat-box {
+    width: 45%;
+    font-size: 60px; } }
 
 .each-box {
   background-color: whitesmoke;
