@@ -89,12 +89,12 @@
     display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 .cat-box {
 	font-family: 'Orbitron', sans-serif;
-	margin-bottom: 1%;
+	margin-bottom: 4%;
 	letter-spacing: 0.2rem;
 	font-size: 18px;
 	color: #ffffff;
@@ -116,22 +116,18 @@
 
 .cat-1 {
 	background-image: url('./images/outdoor.png');
-	// padding-right: 18%;
 }
 
 .cat-2 {
 	background-image: url('./images/afterwork.png');
-	// padding-right: 12%;
 }
 
 .cat-3 {
 	background-image: url('./images/clubbing.png');
-	// padding-right: 17%;
 }
 
 .cat-4 {
 	background-image: url('./images/live.png');
-	// padding-right: 26%;
 }
 
 @media only screen 
@@ -145,24 +141,8 @@ and (max-device-width : 1024px)
 	}
 
 	.cat-box {
-		background-position: center; 
-		width: 40vw;
-		height: 25vh;
-
-
-		.cat-1 {
-			margin-right: 50%;
-		}
-		.cat-2 {
-			margin-right: 50%;
-		}
-		.cat-3 {
-			margin-right: 50%;
-		}
-		.cat-4 {
-			margin-right: 50%;
-		}
-
+		width: 45%;
+		font-size: 26px;
 	}
 
 }
