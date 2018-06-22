@@ -9,13 +9,16 @@ class Homepage extends Component {
 
         this.state = {
             toggle: false,
-            toggleMenu: false
+            animate: false
         }
     }
 
-    toggleEdit() {
-        this.setState({ toggle: !this.state.toggle, toggleMenu: !this.state.toggleMenu })
+    toggle() {
+        this.setState({
+            toggle: !this.state.toggle
+        })
     }
+
 
 
     render() {
@@ -28,14 +31,14 @@ class Homepage extends Component {
                         <h1>Night Row</h1>
                     </Link>
 
-                    <menu className='burger-menu'>
+                    <menu>
 
                         <button
-                            className='hamburger hamburger--squeeze'
-                            onClick={() => this.toggleEdit()}>
-                            <span className='hamburger-box'>
-                                <span className='hamburger-inner'></span>
-                            </span>
+                            onClick={() => this.toggle()}>
+                            <div className='menu-wrapper'>
+                                <div className='hamburger-menu'>
+                                </div>
+                            </div>
                         </button>
 
                         {this.state.toggle
@@ -43,12 +46,14 @@ class Homepage extends Component {
                             <div className='smooth'>
                                 <ul className='menu-list'>
                                     <li>
-                                        <Link to='/reservations' >
+                                        <Link
+                                            to='/reservations'
+                                            onClick={() => this.toggle()} >
                                             Reservations
                                         </Link>
                                     </li>
 
-                                    <li className='menu-font'>
+                                    <li>
                                         {user_name ? (
                                             <a href="http://localhost:3666/auth/logout">
                                                 Logout

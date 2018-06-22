@@ -82,7 +82,7 @@ class Contents extends Component {
 
   render() {
     const props = this.props;
-    const { position } = this.state;
+    // const { position } = this.state;
 
     let mappedMarkers = this.props.events.map((location, i) => {
       return (

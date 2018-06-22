@@ -26,19 +26,19 @@ export default class Homepage extends Component {
                     <Link
                         to='/category/outdoor'
                         className='cat-box cat-1'>
-                        OUTDOOR
+                        <p>OUTDOOR</p>
                     </Link>
                     <Link to='/category/afterwork'
                         className='cat-box cat-2'>
-                        AFTERWORK
+                        <p>AFTERWORK</p>
                     </Link>
                     <Link to='/category/clubbing'
                         className='cat-box cat-3'>
-                        CLUBBING
+                        <p>CLUBBING</p>
                     </Link>
                     <Link to='/category/live'
                         className='cat-box cat-4'>
-                        LIVE
+                        <p>LIVE</p>
                     </Link>
                 </main>
 

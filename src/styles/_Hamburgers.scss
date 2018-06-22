@@ -1,42 +1,64 @@
-.burger-menu {
-  margin-right: 15vw;
+$bar-width: 40px;
+$bar-height: 3px;
+$bar-spacing: 10px;
+
+.menu-wrapper {
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: $bar-width;
+  height: $bar-height + $bar-spacing*2;
+  cursor: pointer;
 }
 
-// .hamburger {
-//   cursor: pointer;
-//   transition-property: opacity, filter;
-//   transition-duration: 0.15s;
-//   transition-timing-function: linear;
-//   color: grey;
-//   text-transform: none;
-//   overflow: visible; 
-// }
-//   .hamburger:hover {
-//     opacity: 0.7; }
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+  width: $bar-width;
+  height: $bar-height;
+  border-radius: 20%;
+  background: grey;
+}
 
-// .hamburger-box {
-//   width: 40px;
-//   height: 24px;
-
-.hamburger-inner {
-  display: block;
-  top: 55%;
-  margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 3.5px;
-    background-color: #636170;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -8px; }
-  .hamburger-inner::after {
-    bottom: -8px; 
-  }
+.hamburger-menu {
+    position: relative;
+    transform: translateY($bar-spacing);
+    transition: all 0ms 300ms;
   
+  &.animate {
+    background: white; 
+  }
+}
+
+.hamburger-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: $bar-spacing;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: $bar-spacing;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.hamburger-menu.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+// https://codepen.io/husnimun/pen/pJvEeL

@@ -63,7 +63,7 @@ class Category extends Component {
                         </Link>
                     </div>
                 </div>
-                <div>
+                <div className='map-size'>
                     <MapContainer
                         google={this.props.google}
                         events={this.state.events} />

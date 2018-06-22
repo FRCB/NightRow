@@ -1,5 +1,5 @@
 header {
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     top: 0;
     display: flex;
@@ -7,31 +7,17 @@ header {
     background-color: #ffffff;
     width: 100%;
     padding-top: 3%;
-}
 
-#logo {
-    margin: auto 5%;
-    white-space: nowrap;
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    text-decoration: none;
-}
-
-
-.smooth {
-    animation-name: hop;
-    animation-duration: 2s; 
-}
-
-@keyframes hop {
-    from {
-        opacity: 0;
+    #logo {
+        margin: auto 5%;
+        white-space: nowrap;
+        font-family: 'Orbitron', sans-serif;
+        background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
     }
-    to {
-        opacity: 0.8;
-    } 
+
 }
 
 .menu-list {
@@ -39,7 +25,7 @@ header {
     z-index: 100;
     right: 0;
     margin: 5vh 0;
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     font-size: 2em;
     background: white;
     list-style: none;
@@ -61,16 +47,44 @@ header {
 
 }
 
+.smooth {
+    animation-name: hop;
+    animation-duration: 2s; 
+}
+
+@keyframes hop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    } 
+}
+
 
 .leftie {
     display: none;
+
+    .header-box {
+        margin: 0 40px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
 }
 
-.header-box {
-    margin: 0 40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+{
+    .menu-wrapper {
+        display: none
+    }
+
+    .leftie {
+        display: flex;
+        margin: auto 1%;
+    }
+
 }
-
-
