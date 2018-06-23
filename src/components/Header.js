@@ -18,8 +18,6 @@ class Homepage extends Component {
         })
     }
 
-
-
     render() {
         let { user_name } = this.props.user;
 
