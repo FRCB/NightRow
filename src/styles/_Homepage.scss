@@ -156,4 +156,21 @@
 		width: 44%;
 		font-size: 60px;
 	}
+
+	
+}
+
+@media (min-width:1200px) {
+	.promise {
+		margin-top: 6.5%;
+		padding: 8% 0 6% 0;
+		line-height: 15%;
+		font-size: 3.5em;
+	}
+
+	.cat-box {
+		margin-top: 1%;
+		width: 23%;
+		font-size: 40px;
+	}
 }

@@ -132,7 +132,7 @@
 
 .menu-wrapper {
   position: absolute;
-  top: 5%;
+  top: 30%;
   left: 75%;
   right: 0;
   bottom: 0;
@@ -151,34 +151,32 @@
 
 .hamburger-menu {
   position: relative;
-  transform: translateY(10px);
-  transition: all 0ms 300ms; }
-  .hamburger-menu.animate {
-    background: white; }
+  transition: 0ms; }
 
 .hamburger-menu:before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 10px;
-  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+  bottom: 10px; }
 
 .hamburger-menu:after {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px;
-  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+  top: 10px; }
 
-.hamburger-menu.animate:after {
-  top: 0;
-  transform: rotate(45deg);
-  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+.active {
+  background: white; }
 
-.hamburger-menu.animate:before {
+.active:before {
+  background: grey;
   bottom: 0;
-  transform: rotate(-45deg);
-  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+  transform: rotate(-45deg); }
+
+.active:after {
+  background: grey;
+  top: 0;
+  transform: rotate(45deg); }
 
 header {
   z-index: 100;
@@ -433,6 +431,17 @@ header {
     width: 44%;
     font-size: 60px; } }
 
+@media (min-width: 1200px) {
+  .promise {
+    margin-top: 6.5%;
+    padding: 8% 0 6% 0;
+    line-height: 15%;
+    font-size: 3.5em; }
+  .cat-box {
+    margin-top: 1%;
+    width: 23%;
+    font-size: 40px; } }
+
 .each-box {
   background-color: whitesmoke;
   padding: 3px;
@@ -520,7 +529,12 @@ header {
   .right-block {
     margin-top: 123px;
     background-color: whitesmoke;
-    width: 100%; } }
+    width: 100%; }
+  .alert {
+    padding-top: 60px;
+    height: 170px;
+    font-size: 2.5em;
+    line-height: 60px; } }
 
 @media (min-width: 1025px) {
   .left-block {
@@ -536,7 +550,21 @@ header {
   .right-block {
     margin-top: 151px;
     background-color: whitesmoke;
-    width: 100%; } }
+    width: 100%; }
+  .alert {
+    margin-top: 2.5%;
+    padding: 60px 350px;
+    height: 250px;
+    font-size: 4.5em;
+    line-height: 120%; } }
+
+@media (min-width: 1200px) {
+  .alert {
+    margin-top: 2.5%;
+    padding: 60px 450px;
+    height: 360px;
+    font-size: 4.5em;
+    line-height: 170%; } }
 
 .add-event-page {
   margin: 25% 5% 0 5%;

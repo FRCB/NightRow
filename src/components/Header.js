@@ -9,7 +9,6 @@ class Homepage extends Component {
 
         this.state = {
             toggle: false,
-            animate: false
         }
     }
 
@@ -36,8 +35,10 @@ class Homepage extends Component {
                         <button
                             onClick={() => this.toggle()}>
                             <div className='menu-wrapper'>
-                                <div className='hamburger-menu'>
-                                </div>
+                                {this.state.toggle ?
+                                    <div className='hamburger-menu active'></div>
+                                    :
+                                    <div className='hamburger-menu'></div>}
                             </div>
                         </button>
 

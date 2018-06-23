@@ -73,6 +73,13 @@
         width:100%;
     }
 
+    .alert {
+        padding-top: 60px;
+        height: 170px;
+        font-size: 2.5em;
+        line-height: 60px;
+    }
+
 }
 
 @media (min-width:1025px) {
@@ -100,4 +107,22 @@
         width:100%;
     }
 
+    .alert {
+        margin-top: 2.5%;
+        padding: 60px 350px ;
+        height: 250px;
+        font-size: 4.5em;
+        line-height: 120%;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .alert {
+        margin-top: 2.5%;
+        padding: 60px 450px ;
+        height: 360px;
+        font-size: 4.5em;
+        line-height: 170%;
+    }
 }
