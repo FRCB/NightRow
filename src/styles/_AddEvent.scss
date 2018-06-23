@@ -1,13 +1,8 @@
 .add-event-page {
-    margin-top: 23%;
-    margin-left: 5%;
-
-    p {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 14px;
-        color: #37bdcc;
-        margin-bottom: 0
-    }
+    margin: 25% 5% 0 5%;
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 
     select {
         
@@ -16,10 +11,72 @@
         color: grey;
     }
 
-    input {
-        font-family: 'Roboto', sans-serif;
-        font-size: 13px;
+    p {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 14px;
+        color: #2f3483;
+        margin: 5px 0 5px 0;
+    }
+
+    textarea {
+        font-family: Roboto;
+        font-size: 14px;
         color: grey;
+        font-weight: 300;
+        width: 98%;
+    }
+    
+    input {
+        margin: 0 0 10px 0;
+        padding : 0;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        color: grey;
+        width: 98%;
     }
 }
 
+@media(min-device-width : 641px) 
+{
+    .add-event-page {
+        margin: 15% 5% 0 5%;
+    
+        p {
+            font-size: 18px;
+        }
+
+        select {
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        textarea {
+            font-size: 20px;
+        }
+
+    }
+}
+
+    @media (min-width:1025px) {
+
+        .add-event-page {
+            margin: 10% 5% 0 5%;
+    
+            h1 {
+                font-size: 36px;
+            }
+        
+            p {
+                font-size: 26px;
+            }
+        
+            h6 {
+                font-size: 28px;
+            }
+    
+        }
+    }

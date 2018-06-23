@@ -7,36 +7,30 @@
     background: linear-gradient(to bottom right, #37bdcc, #2f3483);
     padding: 10% 4%;
     height: 80vh;
+
+    .reservation-title {
+        margin:0;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 6px;
+        flex-wrap: wrap;
+        padding-bottom: 20%;
+        color: white;
+    }
+
+    .profile-image {
+        border-radius: 100%;
+        width: 28vw;
+        height: 15vh;
+    }
 }
 
-.reservation-title {
-    margin:0;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 6px;
-    flex-wrap: wrap;
-    padding-bottom: 20%;
-    color: white;
-}
-
-.profile-image {
-    border-radius: 100%;
-    width: 28vw;
-    height: 15vh;
-}
 
 .right-block {
     margin-top: 85px; 
     background-color: whitesmoke;
     width:100%;
-}
-
-.reserved-event {
-    text-align: left;
-    color: grey;
-    padding: 0% 4%;
-    font-size: 9px;
 }
 
 .alert {
@@ -54,4 +48,56 @@
     text-align: center;
     color: #53aeaf;
     
+}
+
+@media(min-device-width : 641px) 
+{
+    .left-block {
+        margin-top: 12%;
+        padding: 10% 2%;
+
+        .reservation-title {
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+
+        .profile-image {
+            width: 23vw;
+            height: 29vh;
+        }
+    }
+
+    .right-block {
+        margin-top: 123px; 
+        background-color: whitesmoke;
+        width:100%;
+    }
+
+}
+
+@media (min-width:1025px) {
+
+    .left-block {
+        margin-top: 6%;
+        padding: 10% 2%;
+
+        .reservation-title {
+            letter-spacing: 3px;
+            font-weight: 300;
+            font-size: 18px;
+        }
+
+        .profile-image {
+            width: 18vw;
+            height: 27vh;
+        }
+
+    }
+    
+    .right-block {
+        margin-top: 151px; 
+        background-color: whitesmoke;
+        width:100%;
+    }
+
 }

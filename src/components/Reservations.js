@@ -63,7 +63,7 @@ class Reservations extends Component {
                                 />
                             </div>
                             <div className='right-block'>
-                                <div className='reserved-event'>
+                                <div className='each-box'>
                                     {mappedReservations}
                                 </div>
                             </div>

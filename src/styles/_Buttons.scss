@@ -1,7 +1,7 @@
 .complete-button {
     font-family: Orbitron, sans-serif;
     font-size: 14px;
-    color: #2f3483;
+    color: #37bdcc;
     float:right;
     margin-right: 5%;
 }
@@ -9,7 +9,7 @@
 .reserve-button {
     font-family: Orbitron, sans-serif;
     font-size: 14px;
-    color: grey;
+    color: #37bdcc;
     margin-top: 10px;
     margin-bottom: 5px;
     width: 100%;
@@ -19,7 +19,7 @@
 .delete-button-2 {
     font-family: Orbitron, sans-serif;
     font-size: 14px;
-    color: grey;
+    color: #37bdcc;
     margin-bottom: 5px;
     width: 100%;
 }
@@ -27,22 +27,23 @@
 .edit-button {
     font-family: Orbitron, sans-serif;
     font-size: 14px;
-    color: grey;
+    color: #37bdcc;
     margin-bottom: 5px;
     width: 100%;
 }
 
 .add-button {
+    margin-top: 2%;
     font-family: Orbitron, sans-serif;
     font-size: 14px;
-    color: grey;
+    color: #2f3483;
     width: 100%;
 }
 
 .delete-button {
     font-family: Orbitron, sans-serif;
     font-size: 10px;
-    color: grey;
+    color: #2f3483;
     float:right;
     margin-right: 5%;
 }
@@ -50,6 +51,54 @@
 .pay-button {
     font-family: Orbitron, sans-serif;
     font-size: 10px;
-    color: grey;
+    color: #2f3483;
     float:left;
+}
+
+@media(min-device-width : 641px) 
+{
+    .complete-button {
+
+        font-size: 20px;
+        border: none;
+        background: transparent;
+    }
+    
+    .reserve-button {
+
+        font-size: 20px;
+        border: none;
+        background: transparent;
+    }
+     
+    .delete-button-2 {
+        font-size: 20px;  
+        border: none;  
+        background: transparent;  
+    }
+    
+    .edit-button {
+        font-size: 20px;
+        border: none;
+        background: transparent;
+    }
+    
+    .add-button {
+        font-size: 20px;
+        border: none;
+        background: transparent;
+    }
+    
+    .delete-button {
+        font-size: 20px;
+        border: none;
+        background: transparent;
+    }
+    
+    .pay-button {
+        font-size: 20px;
+        border: none;
+        background: transparent;
+    }
+
 }

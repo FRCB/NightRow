@@ -1,8 +1,8 @@
 .show-details {
     margin: 25% 5% 0 5%;
-    padding: 8px;
+    padding: 15px;
     background-color: whitesmoke;
-    border-radius: 5%;
+    border-radius: 10px;
 
     h1 {
         font-family: 'Orbitron', sans-serif;
@@ -29,9 +29,9 @@
 
 .edit-box {
     margin: 25% 5% 0 5%;
-    padding: 8px;
+    padding: 15px;
     background-color: whitesmoke;
-    border-radius: 5%;
+    border-radius: 10px;
 
     p {
         font-family: 'Orbitron', sans-serif;
@@ -58,4 +58,75 @@
         width: 98%;
     }
 
+}
+
+@media(min-device-width : 641px) 
+{
+    .show-details {
+        margin: 15% 5% 0 5%;
+
+        h1 {
+            font-size: 28px;
+        }
+    
+        p {
+            font-size: 18px;
+        }
+    
+        h6 {
+            font-size: 20px;
+        }
+    }
+
+    .edit-box {
+        margin: 15% 5% 0 5%;
+
+        p {
+            font-size: 20px;
+        }
+    
+        textarea {
+            font-size: 22px;
+        }
+        
+        input {
+            font-size: 22px;
+        }  
+}
+}
+
+    @media (min-width:1025px) {
+
+        .show-details {
+            margin: 10% 5% 0 5%;
+    
+            h1 {
+                font-size: 36px;
+            }
+        
+            p {
+                font-size: 26px;
+            }
+        
+            h6 {
+                font-size: 28px;
+            }
+    
+        }
+
+        .edit-box {
+            margin: 10% 5% 0 5%;
+    
+            p {
+                font-size: 26px;
+            }
+        
+            textarea {
+                font-size: 28px;
+            }
+            
+            input {
+                font-size: 28px;
+            }  
+    }
 }

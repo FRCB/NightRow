@@ -68,6 +68,7 @@ header {
     .header-box {
         margin: 0 40px;
         font-family: 'Roboto', sans-serif;
+        color: grey;
         font-size: 20px;
         text-transform: uppercase;
         border: none;
@@ -105,12 +106,18 @@ header {
     header {
         padding-top: 1%;
         
-
         h1 {
             font-size: 58px;
         }
+
      }
     .menu-wrapper {
         display: none
+    }
+
+    .leftie {
+        .header-box {
+            font-size: 25px;
+        }
     }
 }

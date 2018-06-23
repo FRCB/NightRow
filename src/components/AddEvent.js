@@ -76,13 +76,13 @@ export default class AddEvent extends Component {
                     onChange={(e) => this.setState({ time: e.target.value })} />
                 <br />
                 <p>Address</p>
-                <input
+                <textarea
                     type="text"
                     placeholder='Address'
                     onChange={(e) => this.setState({ address: e.target.value })} />
                 <br />
                 <p>About</p>
-                <input
+                <textarea
                     type="text"
                     placeholder='About'
                     onChange={(e) => this.setState({ about: e.target.value })} />
