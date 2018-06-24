@@ -23,9 +23,9 @@ export default class AddEvent extends Component {
     }
 
     createEvent() {
-        let { category, title, date, time, address, about, contact, price } = this.state;
+        let { category, title, date, time, address, about, contact, price, lat, lng } = this.state;
         category = +category;
-        let body = { category, title, date, time, address, about, contact, price };
+        let body = { category, title, date, time, address, about, contact, price, lat, lng };
 
         axios.post(`/api/event`, body)
             .then(() => this.setState({
