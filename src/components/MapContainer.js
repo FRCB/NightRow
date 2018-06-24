@@ -118,7 +118,7 @@ class Contents extends Component {
           <Map {...props}
             containerStyle={{
               position: 'relative',
-              height: '50vh',
+              height: '78vh',
               width: '100%'
             }}
             center={this.state.position}

@@ -128,6 +128,26 @@
 	background-image: url('./images/live.png');
 }
 
+@keyframes pulse {
+	25% {
+		transform: scale(1.02);
+	}
+	75% {
+		transform: scale(.98);
+	}
+}
+
+.pulse {
+	&:hover {
+		animation-name: pulse;
+		animation-duration: 1.5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+}
+
+
+
 @media(min-device-width : 641px) 
 {
     .promise {
@@ -143,34 +163,19 @@
 
 }
 
+
 @media (min-width:1025px) {
-
-    .promise {
-		margin-top: 9%;
-		padding: 7% 0 6% 0;
-		line-height: 15%;
-		font-size: 3em;
-	}
-
-	.cat-box {
-		width: 44%;
-		font-size: 60px;
-	}
-
-	
-}
-
-@media (min-width:1200px) {
 	.promise {
-		margin-top: 6.5%;
-		padding: 8% 0 6% 0;
-		line-height: 15%;
-		font-size: 3.5em;
+		margin-top: 8%;
+		padding: 7% 0 5% 0;
+		line-height: 7%;
+		font-size: 2em;
+		letter-spacing: 0.5rem;
 	}
 
 	.cat-box {
-		margin-top: 1%;
+		margin-top: 2%;
 		width: 23%;
-		font-size: 40px;
+		font-size: 30px;
 	}
 }

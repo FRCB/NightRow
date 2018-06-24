@@ -4,6 +4,9 @@
     padding: 3px;
     margin: 3px;
     border-radius: 10px;
+    &:hover {
+        background-color: #e5e3e3;
+        }
 
     a {
         text-decoration: none;

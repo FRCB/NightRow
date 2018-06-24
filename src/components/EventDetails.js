@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 export default class EventDetails extends Component {
     constructor(props) {
         super(props);
@@ -180,12 +181,12 @@ export default class EventDetails extends Component {
                                     onChange={(e) => this.setState({ editTime: e.target.value })} />
                                 <br />
                                 <p>Address</p>
-                                <textarea
+                                <textarea style="white-space:pre-line"
                                     value={this.state.editAddress}
                                     onChange={(e) => this.setState({ editAddress: e.target.value })} />
                                 <br />
                                 <p>About</p>
-                                <textarea
+                                <textarea style="white-space:pre-line"
                                     value={this.state.editAbout}
                                     onChange={(e) => this.setState({ editAbout: e.target.value })} />
                                 <br />

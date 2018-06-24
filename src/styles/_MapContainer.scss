@@ -1,0 +1,14 @@
+.containerStyle {
+    position: 'relative';
+    height: '50vh';
+    width: '100%';
+  }
+
+  @media(min-device-width : 641px) 
+  {
+      .containerStyle {
+        position: 'relative';
+        height: '100vh';
+        width: '100%';
+  }
+}

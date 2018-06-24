@@ -24,6 +24,7 @@
         font-size: 14px;
         font-weight: 300;
         color: grey;
+        white-space: pre-line;
     }
 }
 
@@ -102,14 +103,15 @@
     
             h1 {
                 font-size: 36px;
+                margin-bottom: 2%;
             }
         
             p {
-                font-size: 26px;
+                font-size: 16px;
             }
         
             h6 {
-                font-size: 28px;
+                font-size: 18px;
             }
     
         }
@@ -118,15 +120,15 @@
             margin: 10% 5% 0 5%;
     
             p {
-                font-size: 26px;
+                font-size: 16px;
             }
         
             textarea {
-                font-size: 28px;
+                font-size: 18px;
             }
             
             input {
-                font-size: 28px;
+                font-size: 18px;
             }  
     }
 }
