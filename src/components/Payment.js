@@ -42,7 +42,7 @@ export default class Payment extends Component {
 
     onToken(token) {
         token.card = void 0;
-        axios.post('http://localhost:3666/api/payment', { token, amount: this.state.price }).then(response => {
+        axios.post('http://localhost:3666/api/payment', { token, amount: this.state.price }).then(res => {
             this.onPurchaseConfirmation();
             this.setState({
                 redirect: true
@@ -53,27 +53,15 @@ export default class Payment extends Component {
 
     render() {
 
-        // if (this.state.redirect)
-        //     return <Redirect to='/gallery' />
+        if (this.state.redirect)
+            return <Redirect to='/reservations' />
 
         return (
             <div className='checkout-body'>
-
-                {/* <section className='checkout-address'>
-                    <div>{this.state.street1}</div>
-                    {this.state.street2 ? <div>{this.state.street2}</div> : null}
-                    <div>{this.state.city}</div>
-                    <div>{this.state.state}</div>
-                    <div>{this.state.zip}</div>
-                    <h2>If your address is not correct, please update it on your "Account" page before completing your purchase</h2>
-                </section>
-
-                <h2>Your total is ${this.state.price / 100}.00</h2>
-
                 <StripeCheckout
                     token={this.onToken}
-                    stripeKey={'pk_test_k1ZmSbaquoQabEKXdT1RBe3x'}
-                    amount={this.state.price} // The amount displayed at the bottom of the payment form
+                    stripeKey={'pk_test_zWSnuTWXQ2tVrModzkzKP99P'}
+                    amount={this.state.price}
                 /> */}
 
             </div>
