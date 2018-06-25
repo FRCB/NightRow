@@ -16,7 +16,7 @@ module.exports = {
         const db = req.app.get('db');
         const { category, title, date, time, address, about, contact, price, lat, lng } = req.body
 
-        db.create_event([category, title, date, time, address, about, contact, price, lat, lng])
+        db.create_event([category, title, date, time, address, about, contact, price, lat, lng, img])
             .then(event => res.status(200).send(event))
             .catch((err) => {
                 console.log(err)
@@ -40,9 +40,9 @@ module.exports = {
         console.log(req.body)
         const db = req.app.get('db');
         const id = req.params.id;
-        const { title, date, time, address, about, contact, price, lat, lng } = req.body
+        const { title, date, time, address, about, contact, price, lat, lng, img } = req.body
 
-        db.edit_event([title, date, time, address, about, contact, price, lat, lng, id])
+        db.edit_event([title, date, time, address, about, contact, price, lat, lng, img, id])
             .then(event => res.status(200).send(event))
             .catch((err) => {
                 console.log(err)
@@ -96,5 +96,17 @@ module.exports = {
                 res.status(500).send(err);
             })
     },
+
+    payEvent: (req, res) => {
+        const db = req.app.get('db');
+        const id = req.params.id;
+
+        db.pay_event([id])
+            .then(event => res.status(200).send(event))
+            .catch((err) => {
+                console.log(err)
+                res.status(500).send(err);
+            })
+    }
 
 }

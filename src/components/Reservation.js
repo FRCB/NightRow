@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Reservation(props) {
 
@@ -34,6 +35,11 @@ export default function Reservation(props) {
                     onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
                     Delete
                 </button>
+                <Link to='/payment'>
+                    <button className='pay-button'>
+                        Pay
+                    </button>
+                </Link>
             </div>
         </div>
     );

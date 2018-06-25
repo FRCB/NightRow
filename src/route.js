@@ -6,7 +6,7 @@ import Category from './components/Category.js';
 import EventDetails from './components/EventDetails.js';
 import AddEvent from './components/AddEvent.js';
 import Reservations from './components/Reservations.js';
-// import Cart from './components/Cart/Cart';
+import Payment from './components/Payment.js';
 
 
 export default (
@@ -16,6 +16,6 @@ export default (
     <Route component={EventDetails} path='/event/:id' />
     <Route component={AddEvent} path='/add' />
     <Route component={Reservations} path='/reservations' />
-    {/* <Route component={Cart} path='/cart' /> */}
+    <Route component={Payment} path='/payment' />
   </Switch>
 )

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ReactS3 from 'react-s3';
-require('dotenv').config();
+import S3FileUpload from 'react-s3';
+import { uploadFile } from 'react-s3';
 
 const { REACT_APP_AWSAccessKeyId, REACT_APP_AWSSecretKey } = process.env
 
 const config = {
     bucketName: 'nightrow',
-    // dirName: 'photos',
-    region: 'eu-east-1',
+    region: 'us-east-1',
     accessKeyId: REACT_APP_AWSAccessKeyId,
     secretAccessKey: REACT_APP_AWSSecretKey,
 }
@@ -29,7 +28,8 @@ export default class EventDetails extends Component {
             editContact: '',
             editPrice: '',
             editLat: '',
-            editLng: ''
+            editLng: '',
+            selectedImg: ''
         }
 
         this.getEvent = this.getEvent.bind(this)
@@ -37,6 +37,7 @@ export default class EventDetails extends Component {
         this.editEvent = this.editEvent.bind(this)
         this.deleteEvent = this.deleteEvent.bind(this)
         this.createReservation = this.createReservation.bind(this)
+        this.upload = this.upload.bind(this)
 
     }
 
@@ -45,7 +46,7 @@ export default class EventDetails extends Component {
         axios.get(`/auth/user`).then((res) => this.setState({ user: res.data }))
     }
 
-    getEvent(title, date, time, address, about, contact, price, lat, lng) {
+    getEvent(title, date, time, address, about, contact, price, lat, lng, img) {
         const body = {
             title: title,
             date: date,
@@ -55,7 +56,8 @@ export default class EventDetails extends Component {
             contact: contact,
             price: price,
             lat: lat,
-            lng: lng
+            lng: lng,
+            img: img
         }
         axios.get(`/api/event/${this.props.match.params.id}`, body)
             .then((res) => this.setState({
@@ -69,7 +71,8 @@ export default class EventDetails extends Component {
                 editContact: res.data[0].event_contact,
                 editPrice: res.data[0].event_price,
                 editLat: res.data[0].event_lat,
-                editLng: res.data[0].event_lng
+                editLng: res.data[0].event_lng,
+                selectedImg: res.data[0].event_img
             }))
     }
 
@@ -78,12 +81,12 @@ export default class EventDetails extends Component {
             this.editEvent(
                 this.state.editTitle, this.state.editDate, this.state.editTime, this.state.editAddress, this.state.editAbout, this.state.editContact, this.state.editPrice,
                 this.state.editLat,
-                this.state.editLng)
+                this.state.editLng, this.state.selectedImg)
         }
         this.setState({ toggleBtn: !this.state.toggleBtn })
     }
 
-    editEvent(title, date, time, address, about, contact, price, lat, lng) {
+    editEvent(title, date, time, address, about, contact, price, lat, lng, img) {
         const body = {
             title: title,
             date: date,
@@ -93,7 +96,8 @@ export default class EventDetails extends Component {
             contact: contact,
             price: price,
             lat: lat,
-            lng: lng
+            lng: lng,
+            img: img
         }
         axios.put(`/api/event/${this.props.match.params.id}`, body)
             .then(res => {
@@ -106,7 +110,8 @@ export default class EventDetails extends Component {
                     editContact: res.data[0].event_contact,
                     editPrice: res.data[0].event_price,
                     editLat: res.data[0].event_lat,
-                    editLng: res.data[0].event_lng
+                    editLng: res.data[0].event_lng,
+                    selectedImg: res.data[0].event_img
                 })
             })
             .then(this.getEvent())
@@ -133,16 +138,10 @@ export default class EventDetails extends Component {
     }
 
     upload(e) {
-        console.log(e.target.files[0])
-        ReactS3.upload(e.target.files[0], config)
-            .then((data) => {
-                console.log(data.location);
-            })
-            .catch((err) => {
-                alert(err);
-            })
+        S3FileUpload.uploadFile(e.target.files[0], config)
+            .then(data => this.setState({ selectedImg: data.location }))
+            .catch(err => console.log(err))
     }
-
 
     render() {
         return (
@@ -185,10 +184,7 @@ export default class EventDetails extends Component {
                                     <h6>{this.state.editLat}</h6>
                                     <h6>{this.state.editLng}</h6>
                                 </p>
-                                <input
-                                    type="file"
-                                    onChange={this.upload}
-                                />
+                                <img src={this.state.selectedImg} alt="pic" />
                             </div>
                             :
                             <div className='edit-box'>
@@ -236,6 +232,10 @@ export default class EventDetails extends Component {
                                 <input
                                     value={this.state.editLng}
                                     onChange={(e) => this.setState({ editLng: e.target.value })} />
+                                <input
+                                    type="file"
+                                    onChange={this.upload}
+                                />
                             </div>
                     }
 

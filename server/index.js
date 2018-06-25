@@ -105,19 +105,25 @@ app.get('/api/reservation', controller.getReservations);
 
 app.delete('/api/reservation/:id', controller.deleteReservation);
 
+app.get('/api/reservation/:id', controller.payEvent);
+
 
 //STRIPE
-app.post('/api/charge', function (req, res) {
-    const db = app.get('db')
-    // console.log(req.body)
-    const charge = stripe.charges.create({
-        amount: req.body.amount,
-        currency: 'usd',
-        source: req.body.token.id,
-        description: 'Example charge'
-    })
-    res.sendStatus(200) // clear out cart here
-})
+// app.post('/api/payment', function (req, res) {
+//     const db = app.get('db')
+//     // console.log(req.body)
+//     const charge = stripe.charges.create({
+//         amount: req.body.price,
+//         currency: 'usd',
+//         source: req.body.token.id,
+//         description: 'Example charge'
+//     })
+//     res.sendStatus(200); // clear out cart here
+//      if (err && err.type === 'StripeCardError') {
+//      The card has been declined
+//      }
+//      }); 
+// })
 
 
 app.listen(SERVER_PORT, () => {
