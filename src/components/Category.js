@@ -5,6 +5,10 @@ import MapContainer from './MapContainer';
 import Event from './Event';
 import axios from 'axios';
 
+const {
+    REACT_APP_API_KEY
+} = process.env;
+
 class Category extends Component {
     constructor(props) {
         super(props);
@@ -74,5 +78,5 @@ class Category extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyACchz5l-d5fJ_RTwK8BuJhbqYdzhFD-5M'
+    apiKey: REACT_APP_API_KEY
 })(Category)

@@ -22,6 +22,4 @@ yarn-error.log*
 
 .env
 
-Category.js
-
 src/**/*.css

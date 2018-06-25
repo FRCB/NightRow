@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ReactS3 from 'react-s3';
+require('dotenv').config();
 
+const { REACT_APP_AWSAccessKeyId, REACT_APP_AWSSecretKey } = process.env
+
+const config = {
+    bucketName: 'nightrow',
+    // dirName: 'photos',
+    region: 'eu-east-1',
+    accessKeyId: REACT_APP_AWSAccessKeyId,
+    secretAccessKey: REACT_APP_AWSSecretKey,
+}
 
 export default class EventDetails extends Component {
     constructor(props) {
@@ -121,6 +132,18 @@ export default class EventDetails extends Component {
             })
     }
 
+    upload(e) {
+        console.log(e.target.files[0])
+        ReactS3.upload(e.target.files[0], config)
+            .then((data) => {
+                console.log(data.location);
+            })
+            .catch((err) => {
+                alert(err);
+            })
+    }
+
+
     render() {
         return (
             <div>
@@ -162,6 +185,10 @@ export default class EventDetails extends Component {
                                     <h6>{this.state.editLat}</h6>
                                     <h6>{this.state.editLng}</h6>
                                 </p>
+                                <input
+                                    type="file"
+                                    onChange={this.upload}
+                                />
                             </div>
                             :
                             <div className='edit-box'>
@@ -181,12 +208,12 @@ export default class EventDetails extends Component {
                                     onChange={(e) => this.setState({ editTime: e.target.value })} />
                                 <br />
                                 <p>Address</p>
-                                <textarea style="white-space:pre-line"
+                                <textarea
                                     value={this.state.editAddress}
                                     onChange={(e) => this.setState({ editAddress: e.target.value })} />
                                 <br />
                                 <p>About</p>
-                                <textarea style="white-space:pre-line"
+                                <textarea
                                     value={this.state.editAbout}
                                     onChange={(e) => this.setState({ editAbout: e.target.value })} />
                                 <br />
