@@ -10,48 +10,44 @@ export default class Payment extends Component {
 
         this.state = {
             redirect: false,
-            user: {},
-            title: '',
             price: 0
         }
-        // this.payEvent = this.payEvent.bind(this)
+        this.payEvent = this.payEvent.bind(this)
+        this.onToken = this.onToken.bind(this)
     }
 
-    // componentDidMount() {
-    //     this.payEvent();
-    //     axios.get(`/auth/user`).then((res) => this.setState({ user: res.data }))
-    // }
+    componentDidMount() {
+        this.payEvent();
+        // console.log(this.state)
+    }
 
-    // payEvent(title, price) {
-    //     const body = {
-    //         title: title,
-    //         price: price
-    //     }
-    //     axios.get(`/api/reservation/${this.props.match.params.id}`, body)
-    //         .then((res) => this.setState({
-    //             title: res.data[0].event_title,
-    //             price: res.data[0].event_price,
-    //         }))
-    // }
+    payEvent(price) {
+        const body = {
+            price: price
+        }
 
+        axios.get(`/api/reservation/${this.props.reservationId}`, body)
+            .then(res => {
+                this.setState({ price: (res.data[0].event_price) })
+            })
+    }
 
-
-    // onPurchaseConfirmation() {
-    //     axios.put('/api/update_paid/' + this.props.location.query.userId)
-    // }
 
     onToken(token) {
+
         token.card = void 0;
-        axios.post('/charge', { token, price: this.state.price }).then(res => {
-            this.onPurchaseConfirmation();
-            this.setState({
-                redirect: true
-            })
-            alert('Thanks for your purchase')
-        });
+        axios.post('/api/payment', { token, amount: this.state.price })
+            .then(res => {
+                this.setState({
+                    redirect: true
+                })
+                alert('Thanks for your purchase')
+            });
     }
 
     render() {
+
+        console.log(this.state)
 
         if (this.state.redirect)
             return <Redirect to='/reservations' />
@@ -61,7 +57,7 @@ export default class Payment extends Component {
                 <StripeCheckout
                     token={this.onToken}
                     stripeKey={'pk_test_zWSnuTWXQ2tVrModzkzKP99P'}
-                    amount={this.state.price}>
+                    amount={this.state.price * 100}>
                 </StripeCheckout>
             </div>
         )

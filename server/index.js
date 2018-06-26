@@ -7,7 +7,8 @@ const express = require('express')
     , massive = require('massive')
     , bodyParser = require('body-parser')
     , controller = require('./controller')
-    , stripe = require('stripe')('pk_test_zWSnuTWXQ2tVrModzkzKP99P')
+    , stripe = require('stripe')(process.env.StripeKey)
+    , cors = require('cors')
 
 
 const {
@@ -25,6 +26,8 @@ const app = express();
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
 })
+
+app.use(cors());
 
 app.use(session({
     secret: SESSION_SECRET,
@@ -106,15 +109,15 @@ app.get('/api/reservation', controller.getReservations);
 
 app.delete('/api/reservation/:id', controller.deleteReservation);
 
-// app.get('/api/reservation/:id', controller.payEvent);
+app.get('/api/reservation/:id', controller.payEvent);
 
 
 //STRIPE
-app.post('/api/charge', function (req, res) {
+app.post('/api/payment', function (req, res) {
     const db = app.get('db')
-    // console.log(req.body)
+    console.log(req.body)
     const charge = stripe.charges.create({
-        amount: req.body.price,
+        amount: req.body.amount * 100,
         currency: 'usd',
         source: req.body.token.id,
         description: 'Example charge'

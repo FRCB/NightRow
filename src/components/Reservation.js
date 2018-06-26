@@ -36,9 +36,11 @@ export default function Reservation(props) {
                     onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
                     Delete
                 </button>
-                <Link to={`/payment/${props.reservation.reservation_id}`}>
-                    <Payment />
-                </Link>
+                <Payment
+                    reservationId={props.reservation.reservation_id} />
+
+                {/* <Link to={`/payment/${props.reservation.reservation_id}`}>
+                </Link> */}
             </div>
         </div>
     );
