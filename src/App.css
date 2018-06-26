@@ -31,7 +31,10 @@
   .map-size {
     margin: 10.5% 0 3% 0;
     position: relative;
-    width: 100%; } }
+    width: 100%; }
+  .map-block {
+    position: fixed;
+    width: 47vw; } }
 
 .event-border {
   border-bottom: solid grey 1px;
@@ -76,6 +79,8 @@
     font-weight: 300;
     color: grey;
     white-space: pre-line; }
+  .show-details img {
+    max-width: 600px; }
 
 .edit-box {
   margin: 25% 5% 0 5%;
@@ -111,6 +116,8 @@
       font-size: 18px; }
     .show-details h6 {
       font-size: 20px; }
+    .show-details img {
+      max-width: 900px; }
   .edit-box {
     margin: 15% 5% 0 5%; }
     .edit-box p {
@@ -130,6 +137,8 @@
       font-size: 16px; }
     .show-details h6 {
       font-size: 18px; }
+    .show-details img {
+      max-width: 900px; }
   .edit-box {
     margin: 10% 5% 0 5%; }
     .edit-box p {
@@ -423,7 +432,8 @@ header {
   background-repeat: no-repeat;
   border-radius: 16px;
   width: 60%;
-  height: 23%; }
+  height: 23%;
+  box-shadow: 5px 5px 5px grey; }
   .cat-box p {
     text-align: center;
     margin: 0;
@@ -684,8 +694,8 @@ header {
   margin-right: 2%;
   font-weight: 300;
   font-family: Orbitron, sans-serif;
-  font-size: 40px;
-  color: #37bdcc; }
+  font-size: 20px;
+  color: #4eb5ed; }
 
 .checkout-body {
   float: right;

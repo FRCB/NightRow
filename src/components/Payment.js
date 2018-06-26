@@ -18,7 +18,6 @@ export default class Payment extends Component {
 
     componentDidMount() {
         this.payEvent();
-        // console.log(this.state)
     }
 
     payEvent(price) {

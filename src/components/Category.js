@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { GoogleApiWrapper } from 'google-maps-react'
+// import { GoogleApiWrapper } from 'google-maps-react'
 import { Link } from 'react-router-dom';
 import MapContainer from './MapContainer';
 import Event from './Event';
 import axios from 'axios';
+import { getUser } from './../redux/reducer';
+import { connect } from 'react-redux';
 
-const {
-    REACT_APP_API_KEY
-} = process.env;
+// const {
+//     REACT_APP_API_KEY
+// } = process.env;
 
 class Category extends Component {
     constructor(props) {
@@ -23,6 +25,7 @@ class Category extends Component {
 
     componentDidMount() {
         this.getCategory();
+        this.props.getUser();
     }
 
     getCategory(title, date, hour, price) {
@@ -42,6 +45,8 @@ class Category extends Component {
     }
 
     render() {
+        let { user_name } = this.props.user;
+
         let mappedEvents = this.state.events.map((event, i) => {
 
             return (
@@ -60,11 +65,19 @@ class Category extends Component {
                 <div className='event-block' >
                     <div className='event-box'>
                         {mappedEvents}
-                        <Link to='/add'>
-                            <button className='add-button'>
-                                Add an Event
-                            </button>
-                        </Link>
+                        <div>
+                            {
+                                user_name ? (
+                                    <Link to='/add'>
+                                        <button className='add-button'>
+                                            Add an Event
+                                        </button>
+                                    </Link>
+                                ) : (
+                                        <div></div>
+                                    )
+                            }
+                        </div>
                     </div>
                 </div>
                 <div className='map-size'>
@@ -77,6 +90,15 @@ class Category extends Component {
     }
 }
 
-export default GoogleApiWrapper({
-    apiKey: REACT_APP_API_KEY
-})(Category)
+function mapStateToProps(state) {
+    return {
+        user: state.user
+    };
+}
+
+// export default GoogleApiWrapper({
+//     apiKey: REACT_APP_API_KEY
+// })(Category)
+
+
+export default connect(mapStateToProps, { getUser })(Category);

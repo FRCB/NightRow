@@ -26,6 +26,10 @@
         color: grey;
         white-space: pre-line;
     }
+
+    img {
+        max-width: 600px;
+    }
 }
 
 .edit-box {
@@ -77,6 +81,9 @@
         h6 {
             font-size: 20px;
         }
+        img {
+            max-width: 900px;
+        }
     }
 
     .edit-box {
@@ -112,6 +119,10 @@
         
             h6 {
                 font-size: 18px;
+            }
+            
+            img {
+                max-width: 900px;
             }
     
         }

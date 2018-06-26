@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import S3FileUpload from 'react-s3';
 // import { uploadFile } from 'react-s3';
+import { getUser } from './../redux/reducer';
+import { connect } from 'react-redux';
 
 const { REACT_APP_AWSAccessKeyId, REACT_APP_AWSSecretKey } = process.env
 
@@ -12,7 +14,7 @@ const config = {
     secretAccessKey: REACT_APP_AWSSecretKey,
 }
 
-export default class EventDetails extends Component {
+class EventDetails extends Component {
     constructor(props) {
         super(props);
 
@@ -144,6 +146,8 @@ export default class EventDetails extends Component {
     }
 
     render() {
+        let { user_name } = this.props.user;
+
         return (
             <div>
                 <div>
@@ -175,6 +179,7 @@ export default class EventDetails extends Component {
                                     Contact
                                     <h6>{this.state.editContact}</h6>
                                 </p>
+                                <hr />
                                 <p>
                                     Price
                                     <h6>{this.state.editPrice}</h6>
@@ -184,7 +189,10 @@ export default class EventDetails extends Component {
                                     <h6>{this.state.editLat}</h6>
                                     <h6>{this.state.editLng}</h6>
                                 </p>
-                                <img src={this.state.selectedImg} alt="pic" />
+                                <hr />
+                                <img
+                                    src={this.state.selectedImg}
+                                    alt="pic" />
                             </div>
                             :
                             <div className='edit-box'>
@@ -239,28 +247,51 @@ export default class EventDetails extends Component {
                                 />
                             </div>
                     }
+                    <div>
+                        {
+                            user_name ? (
+                                <div>
+                                    <button
+                                        className='reserve-button'
+                                        onClick={this.createReservation}>
+                                        Reserve
+                                </button>
+                                    <br />
+                                    <button
+                                        className='delete-button-2'
+                                        onClick={() => this.deleteEvent(this.state.eventId)}>
+                                        Delete
+                                </button>
+                                    <br />
+                                    <button
+                                        className='edit-button'
+                                        onClick={() => this.toggleEdit()}>
+                                        {this.state.toggleBtn ? "Save" : "Edit"}
+                                    </button>
+                                </div>
+                            ) : (
+                                    <div></div>
+                                )
+                        }
+                    </div>
 
-                    <button
-                        className='reserve-button'
-                        onClick={this.createReservation}>
-                        Reserve
-                    </button>
-                    <br />
-
-                    <button
-                        className='delete-button-2'
-                        onClick={() => this.deleteEvent(this.state.eventId)}>
-                        Delete
-                    </button>
-                    <br />
-
-                    <button
-                        className='edit-button'
-                        onClick={() => this.toggleEdit()}>
-                        {this.state.toggleBtn ? "Save" : "Edit"}
-                    </button>
                 </div>
-            </div >
+            </div>
         );
     }
 }
+
+
+function mapStateToProps(state) {
+    return {
+        user: state.user
+    };
+}
+
+// export default GoogleApiWrapper({
+//     apiKey: REACT_APP_API_KEY
+// })(Category)
+
+
+export default connect(mapStateToProps, { getUser })(EventDetails);
+
