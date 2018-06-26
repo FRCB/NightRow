@@ -41,18 +41,19 @@
 }
 
 .delete-button {
+    float: right;
+    margin-top: 1%;
+    margin-right: 2%;
+    font-weight: 300;
     font-family: Orbitron, sans-serif;
-    font-size: 10px;
-    color: #2f3483;
-    float:right;
-    margin-right: 5%;
+    font-size: 40px;
+    color: #37bdcc;
 }
 
-.pay-button {
-    font-family: Orbitron, sans-serif;
-    font-size: 10px;
-    color: #2f3483;
-    float:left;
+.checkout-body {
+    float: right;
+    margin-right: 2%;
+    margin-top: -40px;
 }
 
 @media(min-device-width : 641px) 
@@ -90,7 +91,7 @@
     }
     
     .delete-button {
-        font-size: 20px;
+        font-size: 30px;
         border: none;
         background: transparent;
     }

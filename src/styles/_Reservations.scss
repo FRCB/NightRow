@@ -87,22 +87,24 @@
     .left-block {
         margin-top: 6%;
         padding: 10% 2%;
+        height: 200vh;
 
         .reservation-title {
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             font-weight: 300;
-            font-size: 18px;
+            font-size: 14px;
         }
 
         .profile-image {
-            width: 18vw;
+            width: 16vw;
             height: 27vh;
+            margin: 0 auto;
         }
 
     }
     
     .right-block {
-        margin-top: 151px; 
+        margin-top: 130px; 
         background-color: whitesmoke;
         width:100%;
     }
@@ -115,14 +117,4 @@
         line-height: 120%;
     }
 
-}
-
-@media (min-width:1200px) {
-    .alert {
-        margin-top: 2.5%;
-        padding: 60px 450px ;
-        height: 360px;
-        font-size: 4.5em;
-        line-height: 170%;
-    }
 }

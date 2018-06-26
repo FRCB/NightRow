@@ -573,16 +573,18 @@ header {
 @media (min-width: 1025px) {
   .left-block {
     margin-top: 6%;
-    padding: 10% 2%; }
+    padding: 10% 2%;
+    height: 200vh; }
     .left-block .reservation-title {
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       font-weight: 300;
-      font-size: 18px; }
+      font-size: 14px; }
     .left-block .profile-image {
-      width: 18vw;
-      height: 27vh; }
+      width: 16vw;
+      height: 27vh;
+      margin: 0 auto; }
   .right-block {
-    margin-top: 151px;
+    margin-top: 130px;
     background-color: whitesmoke;
     width: 100%; }
   .alert {
@@ -591,14 +593,6 @@ header {
     height: 250px;
     font-size: 4.5em;
     line-height: 120%; } }
-
-@media (min-width: 1200px) {
-  .alert {
-    margin-top: 2.5%;
-    padding: 60px 450px;
-    height: 360px;
-    font-size: 4.5em;
-    line-height: 170%; } }
 
 .add-event-page {
   margin: 25% 5% 0 5%;
@@ -688,17 +682,18 @@ header {
   width: 100%; }
 
 .delete-button {
-  font-family: Orbitron, sans-serif;
-  font-size: 10px;
-  color: #2f3483;
   float: right;
-  margin-right: 5%; }
-
-.pay-button {
+  margin-top: 1%;
+  margin-right: 2%;
+  font-weight: 300;
   font-family: Orbitron, sans-serif;
-  font-size: 10px;
-  color: #2f3483;
-  float: left; }
+  font-size: 40px;
+  color: #37bdcc; }
+
+.checkout-body {
+  float: right;
+  margin-right: 2%;
+  margin-top: -40px; }
 
 @media (min-device-width: 641px) {
   .complete-button {
@@ -722,7 +717,7 @@ header {
     border: none;
     background: transparent; }
   .delete-button {
-    font-size: 20px;
+    font-size: 30px;
     border: none;
     background: transparent; }
   .pay-button {

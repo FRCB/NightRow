@@ -7,6 +7,10 @@ export default function Reservation(props) {
     return (
         <div>
             <div className='each-box' >
+                <button className='delete-button'
+                    onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
+                    X
+                </button>
                 <div>
                     <p >Event :
                     <h6>{props.reservation.event_title} </h6>
@@ -32,16 +36,10 @@ export default function Reservation(props) {
                     <h6>{props.reservation.event_price} </h6>
                     </p>
                 </div>
-                <button className='delete-button'
-                    onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
-                    Delete
-                </button>
                 <Payment
                     reservationId={props.reservation.reservation_id} />
-
-                {/* <Link to={`/payment/${props.reservation.reservation_id}`}>
-                </Link> */}
             </div>
+            <hr />
         </div>
     );
 }
