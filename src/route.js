@@ -16,6 +16,6 @@ export default (
     <Route component={EventDetails} path='/event/:id' />
     <Route component={AddEvent} path='/add' />
     <Route component={Reservations} path='/reservations' />
-    <Route component={Payment} path='/payment' />
+    <Route component={Payment} path='/payment/:id' />
   </Switch>
 )

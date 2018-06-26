@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import S3FileUpload from 'react-s3';
-import { uploadFile } from 'react-s3';
+// import { uploadFile } from 'react-s3';
 
 const { REACT_APP_AWSAccessKeyId, REACT_APP_AWSSecretKey } = process.env
 
@@ -234,6 +234,7 @@ export default class EventDetails extends Component {
                                     onChange={(e) => this.setState({ editLng: e.target.value })} />
                                 <input
                                     type="file"
+                                    value={this.state.selectedImg}
                                     onChange={this.upload}
                                 />
                             </div>

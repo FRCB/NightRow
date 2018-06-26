@@ -7,6 +7,7 @@ const express = require('express')
     , massive = require('massive')
     , bodyParser = require('body-parser')
     , controller = require('./controller')
+    , stripe = require('stripe')('pk_test_zWSnuTWXQ2tVrModzkzKP99P')
 
 
 const {
@@ -105,11 +106,11 @@ app.get('/api/reservation', controller.getReservations);
 
 app.delete('/api/reservation/:id', controller.deleteReservation);
 
-app.get('/api/reservation/:id', controller.payEvent);
+// app.get('/api/reservation/:id', controller.payEvent);
 
 
 //STRIPE
-app.post('/api/payment', function (req, res) {
+app.post('/api/charge', function (req, res) {
     const db = app.get('db')
     // console.log(req.body)
     const charge = stripe.charges.create({

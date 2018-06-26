@@ -16,16 +16,17 @@ export default class AddEvent extends Component {
             contact: '',
             price: '',
             lat: '',
-            lng: ''
+            lng: '',
+            img: ''
         }
 
         this.createEvent = this.createEvent.bind(this)
     }
 
     createEvent() {
-        let { category, title, date, time, address, about, contact, price, lat, lng } = this.state;
+        let { category, title, date, time, address, about, contact, price, lat, lng, img } = this.state;
         category = +category;
-        let body = { category, title, date, time, address, about, contact, price, lat, lng };
+        let body = { category, title, date, time, address, about, contact, price, lat, lng, img };
 
         axios.post(`/api/event`, body)
             .then(() => this.setState({
@@ -38,7 +39,8 @@ export default class AddEvent extends Component {
                 contact: '',
                 price: '',
                 lat: '',
-                lng: ''
+                lng: '',
+                img: ''
             }))
     }
 
@@ -111,6 +113,10 @@ export default class AddEvent extends Component {
                     placeholder='Longitude'
                     onChange={(e) => this.setState({ lng: e.target.value })} />
                 <br />
+                <input
+                    type="file"
+                    onChange={(e) => this.setState({ img: e.target.value })}
+                />
                 <Link to='/'>
                     <button
                         className='complete-button'

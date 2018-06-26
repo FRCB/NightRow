@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Payment from './Payment'
 
 export default function Reservation(props) {
 
@@ -35,10 +36,8 @@ export default function Reservation(props) {
                     onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
                     Delete
                 </button>
-                <Link to='/payment'>
-                    <button className='pay-button'>
-                        Pay
-                    </button>
+                <Link to={`/payment/${props.reservation.reservation_id}`}>
+                    <Payment />
                 </Link>
             </div>
         </div>

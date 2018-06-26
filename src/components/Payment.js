@@ -14,25 +14,25 @@ export default class Payment extends Component {
             title: '',
             price: 0
         }
-        this.payEvent = this.payEvent.bind(this)
+        // this.payEvent = this.payEvent.bind(this)
     }
 
-    componentDidMount() {
-        this.payEvent();
-        axios.get(`/auth/user`).then((res) => this.setState({ user: res.data }))
-    }
+    // componentDidMount() {
+    //     this.payEvent();
+    //     axios.get(`/auth/user`).then((res) => this.setState({ user: res.data }))
+    // }
 
-    payEvent(title, price) {
-        const body = {
-            title: title,
-            price: price
-        }
-        axios.get(`/api/reservation/${this.props.match.params.id}`, body)
-            .then((res) => this.setState({
-                title: res.data[0].event_title,
-                price: res.data[0].event_price,
-            }))
-    }
+    // payEvent(title, price) {
+    //     const body = {
+    //         title: title,
+    //         price: price
+    //     }
+    //     axios.get(`/api/reservation/${this.props.match.params.id}`, body)
+    //         .then((res) => this.setState({
+    //             title: res.data[0].event_title,
+    //             price: res.data[0].event_price,
+    //         }))
+    // }
 
 
 
@@ -42,7 +42,7 @@ export default class Payment extends Component {
 
     onToken(token) {
         token.card = void 0;
-        axios.post('http://localhost:3666/api/payment', { token, amount: this.state.price }).then(res => {
+        axios.post('/charge', { token, price: this.state.price }).then(res => {
             this.onPurchaseConfirmation();
             this.setState({
                 redirect: true
@@ -61,9 +61,8 @@ export default class Payment extends Component {
                 <StripeCheckout
                     token={this.onToken}
                     stripeKey={'pk_test_zWSnuTWXQ2tVrModzkzKP99P'}
-                    amount={this.state.price}
-                /> */}
-
+                    amount={this.state.price}>
+                </StripeCheckout>
             </div>
         )
     }
