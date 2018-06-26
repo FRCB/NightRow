@@ -80,7 +80,7 @@
     color: grey;
     white-space: pre-line; }
   .show-details img {
-    max-width: 600px; }
+    max-width: 300px; }
 
 .edit-box {
   margin: 25% 5% 0 5%;
@@ -117,7 +117,7 @@
     .show-details h6 {
       font-size: 20px; }
     .show-details img {
-      max-width: 900px; }
+      max-width: 700px; }
   .edit-box {
     margin: 15% 5% 0 5%; }
     .edit-box p {
@@ -137,8 +137,6 @@
       font-size: 16px; }
     .show-details h6 {
       font-size: 18px; }
-    .show-details img {
-      max-width: 900px; }
   .edit-box {
     margin: 10% 5% 0 5%; }
     .edit-box p {
