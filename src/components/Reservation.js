@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Payment from './Payment'
 
 export default function Reservation(props) {
 
     return (
-        <div>
-            <div className='each-box' >
+        <div className='each-box'>
+            <div >
                 <button className='delete-button'
                     onClick={() => props.deleteReservation(props.reservation.reservation_id)}>
                     X
@@ -39,7 +38,7 @@ export default function Reservation(props) {
                 <Payment
                     reservationId={props.reservation.reservation_id} />
             </div>
-            <hr />
         </div>
+
     );
 }
