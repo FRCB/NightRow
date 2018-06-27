@@ -53,6 +53,14 @@ class Homepage extends Component {
                                     </li>
 
                                     <li>
+                                        <Link
+                                            to='/contact'
+                                            onClick={() => this.toggle()} >
+                                            Contact
+                                        </Link>
+                                    </li>
+
+                                    <li>
                                         {user_name ? (
                                             <a href="http://localhost:3666/auth/logout">
                                                 Logout
@@ -76,6 +84,13 @@ class Homepage extends Component {
                         <Link to='/reservations' >
                             <button className='header-box'>
                                 Reservations
+                            </button>
+                        </Link>
+
+                        <Link
+                            to='/contact'>
+                            <button className='header-box'>
+                                Contact
                             </button>
                         </Link>
 

@@ -9,6 +9,7 @@ const express = require('express')
     , controller = require('./controller')
     , stripe = require('stripe')(process.env.StripeKey)
     , cors = require('cors')
+    , nodemailer = require('nodemailer')
 
 
 const {
@@ -18,7 +19,9 @@ const {
     CLIENT_ID,
     CLIENT_SECRET,
     CALLBACK_URL,
-    CONNECTION_STRING
+    CONNECTION_STRING,
+    EMAIL,
+    EMAIL_PASSWORD
 } = process.env;
 
 const app = express();
@@ -127,6 +130,33 @@ app.post('/api/payment', function (req, res) {
         "The card has been declined"
     }
 });
+
+// NODEMAILER
+app.post('/send', function (req, res, next) {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: EMAIL,
+            pass: EMAIL_PASSWORD
+        }
+    })
+    const { user_name, user_email, message } = req.body;
+
+    const mailOptions = {
+        from: user_email,
+        to: 'france.bushman@gmail.com',
+        subject: user_name,
+        text: message
+    }
+
+    transporter.sendMail(mailOptions, (error, response) => {
+        if (error) {
+            console.log(error)
+        } else {
+            res.status(200).send(response)
+        }
+    })
+})
 
 
 app.listen(SERVER_PORT, () => {

@@ -7,6 +7,7 @@ import EventDetails from './components/EventDetails.js';
 import AddEvent from './components/AddEvent.js';
 import Reservations from './components/Reservations.js';
 import Payment from './components/Payment.js';
+import Contact from './components/Contact.js';
 
 
 export default (
@@ -17,5 +18,6 @@ export default (
     <Route component={AddEvent} path='/add' />
     <Route component={Reservations} path='/reservations' />
     <Route component={Payment} path='/payment/:id' />
+    <Route component={Contact} path='/contact' />
   </Switch>
 )
