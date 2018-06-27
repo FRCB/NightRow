@@ -1,12 +1,17 @@
+.resa-page {
+    width: 100vw;
+}
+
 .reservation-flex {
    display: flex; 
 }
 
 .left-block {
+    position: fixed;
     margin-top: 23%;
     background: linear-gradient(to bottom right, #37bdcc, #2f3483);
     padding: 10% 4%;
-    height: 80vh;
+    height: 50vh;
 
     .reservation-title {
         margin:0;
@@ -29,7 +34,7 @@
 
 .right-block {
     margin-top: 85px; 
-    width:100%;
+    padding-left: 360px;
 
 }
 

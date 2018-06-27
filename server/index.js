@@ -124,11 +124,11 @@ app.post('/api/payment', function (req, res) {
         currency: 'usd',
         source: req.body.token.id,
         description: 'Example charge'
-    })
-    res.sendStatus(200); // clear out cart here
-    if (err && err.type === 'StripeCardError') {
-        "The card has been declined"
-    }
+    }, function (err, charge) {
+        if (err) return res.sendStatus(500)
+        return res.sendStatus(200);
+
+    });
 });
 
 // NODEMAILER
