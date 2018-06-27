@@ -263,7 +263,9 @@ header {
     font-size: 20px;
     text-transform: uppercase;
     border: none;
-    background: transparent; }
+    background: transparent;
+    font-weight: 300;
+    text-shadow: 0.5px 1px #807d7e; }
   .leftie button {
     text-decoration: none;
     position: relative; }
