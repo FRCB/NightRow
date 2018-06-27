@@ -525,9 +525,6 @@ header {
   .each-box h6 {
     font-size: 20px; } }
 
-.resa-page {
-  width: 100vw; }
-
 .reservation-flex {
   display: flex; }
 
@@ -536,10 +533,12 @@ header {
   margin-top: 23%;
   background: linear-gradient(to bottom right, #37bdcc, #2f3483);
   padding: 10% 4%;
-  height: 50vh; }
+  height: 90vh;
+  width: 28vw; }
   .left-block .reservation-title {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 6px;
@@ -553,7 +552,7 @@ header {
 
 .right-block {
   margin-top: 85px;
-  padding-left: 360px; }
+  padding-left: 135px; }
 
 .alert {
   position: absolute;
@@ -573,21 +572,36 @@ header {
 @media (min-device-width: 641px) {
   .left-block {
     margin-top: 12%;
-    padding: 10% 2%; }
+    padding: 10% 2%;
+    width: 30vw; }
     .left-block .reservation-title {
       letter-spacing: 3px;
       font-size: 14px; }
     .left-block .profile-image {
-      width: 23vw;
-      height: 29vh; }
+      width: 29vw;
+      height: 22vh; }
   .right-block {
-    margin-top: 123px;
+    margin-top: 120px;
+    padding-left: 265px;
     width: 100%; }
   .alert {
     padding-top: 60px;
     height: 170px;
     font-size: 2.5em;
     line-height: 60px; } }
+
+@media (min-device-width: 1024px) {
+  .right-block {
+    margin-top: 120px;
+    padding-left: 280px;
+    width: 100%; }
+  .left-block {
+    margin-top: 12%;
+    padding: 10% 2%;
+    width: 23vw; }
+    .left-block .profile-image {
+      width: 22.5vw;
+      height: 24vh; } }
 
 @media (min-width: 1025px) {
   .left-block {
@@ -597,14 +611,15 @@ header {
     .left-block .reservation-title {
       letter-spacing: 2px;
       font-weight: 300;
-      font-size: 14px; }
+      font-size: 12px; }
     .left-block .profile-image {
-      width: 16vw;
-      height: 27vh;
+      width: 17vw;
+      height: 30vh;
       margin: 0 auto; }
   .right-block {
     margin-top: 130px;
-    width: 100%; }
+    width: 100%;
+    padding-left: 390px; }
   .alert {
     margin-top: 2.5%;
     padding: 60px 350px;

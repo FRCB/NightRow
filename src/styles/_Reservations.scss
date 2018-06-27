@@ -1,6 +1,4 @@
-.resa-page {
-    width: 100vw;
-}
+
 
 .reservation-flex {
    display: flex; 
@@ -11,11 +9,13 @@
     margin-top: 23%;
     background: linear-gradient(to bottom right, #37bdcc, #2f3483);
     padding: 10% 4%;
-    height: 50vh;
+    height: 90vh;
+    width: 28vw;
 
     .reservation-title {
         margin:0;
         font-family: 'Roboto', sans-serif;
+        font-weight: 300;
         letter-spacing: 2px;
         text-transform: uppercase;
         font-size: 6px;
@@ -34,7 +34,7 @@
 
 .right-block {
     margin-top: 85px; 
-    padding-left: 360px;
+    padding-left: 135px;
 
 }
 
@@ -60,6 +60,7 @@
     .left-block {
         margin-top: 12%;
         padding: 10% 2%;
+        width: 30vw;
 
         .reservation-title {
             letter-spacing: 3px;
@@ -67,14 +68,14 @@
         }
 
         .profile-image {
-            width: 23vw;
-            height: 29vh;
+            width: 29vw;
+            height: 22vh;
         }
     }
 
     .right-block {
-        margin-top: 123px; 
-        // background-color: whitesmoke;
+        margin-top: 120px; 
+        padding-left: 265px;
         width:100%;
     }
 
@@ -84,6 +85,25 @@
         font-size: 2.5em;
         line-height: 60px;
     }
+
+}
+
+@media(min-device-width : 1024px)  {
+    .right-block {
+        margin-top: 120px; 
+        padding-left: 280px;
+        width:100%;
+    }
+    .left-block {
+        margin-top: 12%;
+        padding: 10% 2%;
+        width: 23vw;
+
+    .profile-image {
+        width: 22.5vw;
+        height: 24vh;
+    }
+}
 
 }
 
@@ -97,12 +117,12 @@
         .reservation-title {
             letter-spacing: 2px;
             font-weight: 300;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .profile-image {
-            width: 16vw;
-            height: 27vh;
+            width: 17vw;
+            height: 30vh;
             margin: 0 auto;
         }
 
@@ -111,6 +131,7 @@
     .right-block {
         margin-top: 130px; 
         width:100%;
+        padding-left: 390px;
     }
 
     .alert {

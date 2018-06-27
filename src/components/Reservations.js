@@ -48,7 +48,7 @@ class Reservations extends Component {
         })
 
         return (
-            <div className='resa-page'>
+            <div>
                 {
                     user_name ? (
                         <div className='reservation-flex' >
