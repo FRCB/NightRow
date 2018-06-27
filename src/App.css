@@ -265,7 +265,7 @@ header {
     border: none;
     background: transparent;
     font-weight: 300;
-    text-shadow: 0.5px 1px #807d7e; }
+    text-shadow: 1px 1px 1 #807d7e; }
   .leftie button {
     text-decoration: none;
     position: relative; }
