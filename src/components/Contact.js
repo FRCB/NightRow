@@ -54,6 +54,7 @@ export default class Contact extends Component {
                     onChange={(e) => this.setState({ message: e.target.value })} />
                 <br />
                 <button
+                    className='send-button'
                     onClick={this.sendEmail}>
                     Send your message
                 </button>

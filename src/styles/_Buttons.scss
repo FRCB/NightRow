@@ -56,6 +56,14 @@
     margin-top: -40px;
 }
 
+.send-button {
+    margin-top: 2%;
+    font-family: Orbitron, sans-serif;
+    font-size: 14px;
+    color: #2f3483;
+    width: 100%;  
+}
+
 @media(min-device-width : 641px) 
 {
     .complete-button {
@@ -100,6 +108,12 @@
         font-size: 20px;
         border: none;
         background: transparent;
+    }
+
+    .send-button {
+        font-size: 20px;
+        border: none;
+        background: transparent; 
     }
 
 }
