@@ -5,7 +5,6 @@ import App from './App';
 import { unregister } from './registerServiceWorker';
 import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
-// import { StripeProvider } from 'react-stripe-elements';
 import store from './redux/store'
 
 ReactDOM.render(

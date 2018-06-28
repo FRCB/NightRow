@@ -616,11 +616,12 @@ header {
     padding: 10% 2%;
     width: 22vw; }
     .left-block .reservation-title {
-      letter-spacing: 3px;
+      letter-spacing: 2.75px;
       font-size: 14px; }
     .left-block .profile-image {
-      width: 22vw;
-      height: 30vh; }
+      width: 15vw;
+      height: 20vh;
+      margin-left: 40px; }
   .right-block {
     margin-top: 130px;
     padding-left: 380px;

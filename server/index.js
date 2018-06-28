@@ -26,6 +26,8 @@ const {
 
 const app = express();
 
+app.use(express.static(`${__dirname}/../build`));
+
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
 })
@@ -80,12 +82,12 @@ passport.deserializeUser((primaryKeyid, done) => {
 // ENDPOINTS
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/reservations'
+    successRedirect: `${process.env.FRONTEND_URL}/#/reservations`
 }))
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect('http://localhost:3000/#/')
+    res.redirect(`${process.env.FRONTEND_URL}/#/`)
 })
 
 app.get('/auth/user', (req, res) => {
