@@ -26,7 +26,7 @@ export default class Event extends Component {
                         </div>
                         <div>
                             <p>Price :
-                            <h6>{this.props.event.event_price} </h6>
+                            <h6>${this.props.event.event_price} </h6>
                             </p>
                         </div>
                     </div>

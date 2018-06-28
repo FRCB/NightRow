@@ -182,7 +182,7 @@ class EventDetails extends Component {
                                 <hr />
                                 <p>
                                     Price
-                                    <h6>{this.state.editPrice}</h6>
+                                    <h6>${this.state.editPrice}</h6>
                                 </p>
                                 <hr />
                                 <p>Latitude & Longitude

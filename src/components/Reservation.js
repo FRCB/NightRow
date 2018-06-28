@@ -32,7 +32,7 @@ export default function Reservation(props) {
                 </div>
                 <div>
                     <p>Price :
-                    <h6>{props.reservation.event_price} </h6>
+                    <h6>${props.reservation.event_price} </h6>
                     </p>
                 </div>
                 <Payment

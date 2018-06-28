@@ -34,6 +34,9 @@ $bar-spacing: 10px;
     position: absolute;
     left: 0;
     bottom: $bar-spacing;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
 }
 
 .hamburger-menu:after {
@@ -41,6 +44,9 @@ $bar-spacing: 10px;
     position: absolute;
     left: 0;
     top: $bar-spacing;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
 }
 
 .active {
@@ -51,12 +57,18 @@ $bar-spacing: 10px;
     background: grey; 
     bottom: 0;
     transform: rotate(-45deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
   }
 
   .active:after {
     background: grey; 
     top: 0;
     transform: rotate(45deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
   }
 
   

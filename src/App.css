@@ -185,13 +185,19 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 10px; }
+  bottom: 10px;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out; }
 
 .hamburger-menu:after {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px; }
+  top: 10px;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out; }
 
 .active {
   background: white; }
@@ -199,12 +205,18 @@
 .active:before {
   background: grey;
   bottom: 0;
-  transform: rotate(-45deg); }
+  transform: rotate(-45deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out; }
 
 .active:after {
   background: grey;
   top: 0;
-  transform: rotate(45deg); }
+  transform: rotate(45deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out; }
 
 header {
   z-index: 100;
