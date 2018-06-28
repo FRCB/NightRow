@@ -310,8 +310,9 @@ header {
   .menu-wrapper {
     display: none; }
   .leftie {
-    display: flex;
-    margin: auto 1%; } }
+    display: inherit; }
+    .leftie .header-box {
+      margin: 3vh 0 0 2vh; } }
 
 @media (min-width: 1025px) {
   header {
@@ -321,7 +322,12 @@ header {
   .menu-wrapper {
     display: none; }
   .leftie .header-box {
-    font-size: 22px; } }
+    font-size: 22px;
+    margin: auto 0; }
+  .leftie a {
+    margin: auto 5vh; }
+  .leftie div {
+    margin: auto 0; } }
 
 .promise {
   background-image: url(https://i.imgur.com/kZn7d4b.jpg);
