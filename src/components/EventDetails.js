@@ -240,6 +240,7 @@ class EventDetails extends Component {
                                 <input
                                     value={this.state.editLng}
                                     onChange={(e) => this.setState({ editLng: e.target.value })} />
+                                <br />
                                 <input
                                     type="file"
                                     value={this.state.selectedImg}

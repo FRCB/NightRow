@@ -89,7 +89,8 @@
     color: grey;
     white-space: pre-line; }
   .show-details img {
-    max-width: 300px; }
+    max-width: 300px;
+    border-radius: 10px; }
 
 .edit-box {
   margin: 25% 5% 0 5%;
