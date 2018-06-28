@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import S3FileUpload from 'react-s3';
-// import { uploadFile } from 'react-s3';
+import { uploadFile } from 'react-s3';
 import { getUser } from './../redux/reducer';
 import { connect } from 'react-redux';
 
@@ -242,6 +242,7 @@ class EventDetails extends Component {
                                     onChange={(e) => this.setState({ editLng: e.target.value })} />
                                 <br />
                                 <input
+                                    className='choose-file'
                                     type="file"
                                     value={this.state.selectedImg}
                                     onChange={this.upload}

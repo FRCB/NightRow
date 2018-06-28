@@ -89,8 +89,10 @@
     color: grey;
     white-space: pre-line; }
   .show-details img {
+    display: block;
     max-width: 300px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin: 0 auto; }
 
 .edit-box {
   margin: 25% 5% 0 5%;
@@ -127,7 +129,7 @@
     .show-details h6 {
       font-size: 20px; }
     .show-details img {
-      max-width: 700px; }
+      max-width: 600px; }
   .edit-box {
     margin: 15% 5% 0 5%; }
     .edit-box p {
@@ -620,7 +622,7 @@ header {
       font-size: 14px; }
     .left-block .profile-image {
       width: 15vw;
-      height: 20vh;
+      height: 22vh;
       margin-left: 40px; }
   .right-block {
     margin-top: 130px;
@@ -735,6 +737,11 @@ header {
   font-size: 14px;
   color: #2f3483;
   width: 100%; }
+
+.choose-file {
+  margin-top: 2% !important;
+  font-family: Roboto !important;
+  color: grey !important; }
 
 @media (min-device-width: 641px) {
   .complete-button {

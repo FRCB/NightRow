@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import S3FileUpload from 'react-s3';
+import { uploadFile } from 'react-s3';
 import { Link } from 'react-router-dom'
+
+const { REACT_APP_AWSAccessKeyId, REACT_APP_AWSSecretKey } = process.env
+
+const config = {
+    bucketName: 'nightrow',
+    region: 'us-east-1',
+    accessKeyId: REACT_APP_AWSAccessKeyId,
+    secretAccessKey: REACT_APP_AWSSecretKey,
+}
 
 export default class AddEvent extends Component {
     constructor(props) {
@@ -19,7 +30,7 @@ export default class AddEvent extends Component {
             lng: '',
             img: ''
         }
-
+        this.uploadImg = this.uploadImg.bind(this)
         this.createEvent = this.createEvent.bind(this)
     }
 
@@ -42,6 +53,12 @@ export default class AddEvent extends Component {
                 lng: '',
                 img: ''
             }))
+    }
+
+    uploadImg(e) {
+        S3FileUpload.uploadFile(e.target.files[0], config)
+            .then(data => this.setState({ img: data.location }))
+            .catch(err => console.log(err))
     }
 
     render() {
@@ -114,8 +131,10 @@ export default class AddEvent extends Component {
                     onChange={(e) => this.setState({ lng: e.target.value })} />
                 <br />
                 <input
+                    className='choose-file'
                     type="file"
-                    onChange={(e) => this.setState({ img: e.target.value })}
+                    value={this.state.img}
+                    onChange={this.uploadImg}
                 />
                 <Link to='/'>
                     <button
