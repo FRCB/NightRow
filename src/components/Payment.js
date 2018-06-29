@@ -40,7 +40,7 @@ export default class Payment extends Component {
                 this.setState({
                     redirect: true
                 })
-                alert('Thanks for your purchase')
+                alert('Thanks for your purchase!')
             });
     }
 

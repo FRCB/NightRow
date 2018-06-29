@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import S3FileUpload from 'react-s3';
-import { uploadFile } from 'react-s3';
+import S3FileUpload from 'aws-s3';
 import { Link } from 'react-router-dom'
 
 const { REACT_APP_AWSAccessKeyId, REACT_APP_AWSSecretKey } = process.env

@@ -646,6 +646,12 @@ header {
     margin-top: 130px;
     padding-left: 380px;
     padding-right: 1%;
+    width: 100%; }
+  .alert {
+    padding-top: 9px;
+    height: 0px;
+    font-size: 1em;
+    line-height: 38px;
     width: 100%; } }
 
 .add-event-page {
