@@ -248,7 +248,7 @@ header {
   z-index: 100;
   right: 0;
   margin: 5vh 0;
-  padding: 10px 10px 20px 10px;
+  padding: 15px 10px 20px 10px;
   font-size: 2em;
   background: white;
   list-style: none;
@@ -352,7 +352,8 @@ header {
   letter-spacing: 0.3rem;
   font-size: 1.5em;
   color: #ffffff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: inset 0px -20px 10px -15px; }
 
 .verticalFlip {
   margin: 5%;
