@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron:700|Roboto:300");
 .category-flex {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-image: url("https://www.technobuffalo.com/wp-content/uploads/2013/02/star.jpg");
+  background-repeat: initial; }
 
 .event-block {
-  margin-top: 23%;
+  margin-top: 30%;
   margin-bottom: 5%;
-  background-color: white;
   width: 100%; }
 
 .event-box {
   text-align: left;
-  margin: 0 5%; }
+  margin: 0 5%;
+  background: transparent; }
 
 .map-size {
   position: relative;
@@ -34,7 +36,8 @@
 @media (min-width: 1025px) {
   .category-flex {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    background-repeat: round; }
   .event-block {
     margin: 10% 0 3% 0; }
   .map-size {
@@ -66,15 +69,19 @@
 .detailedInfo {
   display: none; }
 
+.galaxy {
+  background-image: url("https://www.technobuffalo.com/wp-content/uploads/2013/02/star.jpg");
+  background-repeat: initial; }
+
 .show-details {
   margin: 25% 5% 0 5%;
   padding: 15px;
-  background-color: whitesmoke;
+  background-color: rgba(230, 227, 227, 0.7);
   border-radius: 10px; }
   .show-details h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 20px;
-    color: #37bdcc;
+    color: #2f3483;
     margin-bottom: 0; }
   .show-details p {
     font-family: 'Orbitron', sans-serif;
@@ -86,7 +93,7 @@
     font-family: Roboto;
     font-size: 14px;
     font-weight: 300;
-    color: grey;
+    color: black;
     white-space: pre-line; }
   .show-details img {
     display: block;
@@ -140,6 +147,8 @@
       font-size: 22px; } }
 
 @media (min-width: 1025px) {
+  .galaxy {
+    background-repeat: round; }
   .show-details {
     margin: 10% 5% 0 5%; }
     .show-details h1 {
@@ -233,7 +242,7 @@ header {
   header h1 {
     white-space: nowrap;
     font-family: 'Orbitron', sans-serif;
-    -webkit-animation: logo 15s infinite; }
+    -webkit-animation: logo 10s infinite; }
 
 @-webkit-keyframes logo {
   0% {
@@ -523,7 +532,7 @@ header {
     font-size: 30px; } }
 
 .each-box {
-  background-color: whitesmoke;
+  background-color: rgba(230, 227, 227, 0.7);
   padding: 3px;
   margin: 3px;
   border-radius: 10px; }
@@ -534,7 +543,7 @@ header {
   .each-box p {
     font-family: Orbitron, sans-serif;
     font-size: 11px;
-    color: #37bdcc;
+    color: #2f3483;
     padding-left: 2%; }
   .each-box h6 {
     margin: 0;
@@ -542,7 +551,7 @@ header {
     font-family: Roboto;
     font-weight: 300;
     font-size: 12px;
-    color: grey; }
+    color: black; }
 
 @media (min-device-width: 641px) {
   .each-box p {
@@ -562,10 +571,12 @@ header {
 .left-block {
   position: fixed;
   margin-top: 23%;
-  background: linear-gradient(to bottom right, #37bdcc, #2f3483);
+  background-image: url("https://www.technobuffalo.com/wp-content/uploads/2013/02/star.jpg");
+  background-repeat: initial;
   padding: 10% 4%;
   height: 90vh;
-  width: 28vw; }
+  width: 28vw;
+  box-shadow: inset 0px 1px 10px 1px grey; }
   .left-block .reservation-title {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -666,7 +677,8 @@ header {
   margin: 25% 5% 0 5%;
   padding: 15px;
   background-color: whitesmoke;
-  border-radius: 10px; }
+  border-radius: 10px;
+  height: 82vh; }
   .add-event-page select {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
@@ -746,7 +758,7 @@ header {
   margin-top: 2%;
   font-family: Orbitron, sans-serif;
   font-size: 14px;
-  color: #2f3483;
+  color: #37bdcc;
   width: 100%; }
 
 .delete-button {

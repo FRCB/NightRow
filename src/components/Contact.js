@@ -32,33 +32,35 @@ export default class Contact extends Component {
     render() {
 
         return (
-            <div className='add-event-page'>
-                <p>Name</p>
-                <input
-                    type='text'
-                    placeholder='Name'
-                    onChange={(e) => this.setState({ user_name: e.target.value })} />
-                <br />
-                <p>Email</p>
-                <input
-                    type='text'
-                    placeholder='Email'
-                    onChange={(e) => this.setState({ user_email: e.target.value })} />
-                <br />
-                <p>Message</p>
-                <textarea
-                    style={{ whiteSpace: 'pre-wrap' }}
-                    rows="10"
-                    type="text"
-                    placeholder='Write your message here'
-                    onChange={(e) => this.setState({ message: e.target.value })} />
-                <br />
-                <button
-                    className='send-button'
-                    onClick={this.sendEmail}>
-                    Send your message
+            <div className='galaxy add-page'>
+                <div className='add-event-page'>
+                    <p>Name</p>
+                    <input
+                        type='text'
+                        placeholder='Name'
+                        onChange={(e) => this.setState({ user_name: e.target.value })} />
+                    <br />
+                    <p>Email</p>
+                    <input
+                        type='text'
+                        placeholder='Email'
+                        onChange={(e) => this.setState({ user_email: e.target.value })} />
+                    <br />
+                    <p>Message</p>
+                    <textarea
+                        style={{ whiteSpace: 'pre-wrap' }}
+                        rows="15"
+                        type="text"
+                        placeholder='Write your message here'
+                        onChange={(e) => this.setState({ message: e.target.value })} />
+                    <br />
+                    <button
+                        className='send-button'
+                        onClick={this.sendEmail}>
+                        Send your message
                 </button>
-            </div>
+                </div>
+            </div >
         )
     }
 }

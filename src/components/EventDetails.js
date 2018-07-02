@@ -149,7 +149,7 @@ class EventDetails extends Component {
 
         return (
             <div>
-                <div>
+                <div className='galaxy'>
                     {
                         !this.state.toggleBtn
                             ?

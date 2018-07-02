@@ -1,13 +1,18 @@
+.galaxy {
+    background-image: url('https://www.technobuffalo.com/wp-content/uploads/2013/02/star.jpg');
+    background-repeat: initial;
+}
+
 .show-details {
     margin: 25% 5% 0 5%;
     padding: 15px;
-    background-color: whitesmoke;
+    background-color: rgba(230, 227, 227, 0.7);
     border-radius: 10px;
 
     h1 {
         font-family: 'Orbitron', sans-serif;
         font-size: 20px;
-        color: #37bdcc;
+        color: #2f3483;
         margin-bottom: 0
     }
 
@@ -23,7 +28,7 @@
         font-family: Roboto;
         font-size: 14px;
         font-weight: 300;
-        color: grey;
+        color: black;
         white-space: pre-line;
     }
 
@@ -107,6 +112,10 @@
 }
 
     @media (min-width:1025px) {
+
+        .galaxy {
+            background-repeat: round;
+        }
 
         .show-details {
             margin: 10% 5% 0 5%;
