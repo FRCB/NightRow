@@ -16,11 +16,11 @@ header {
     h1 {
         white-space: nowrap;
         font-family: 'Orbitron', sans-serif;
-        -webkit-animation:logo 10s infinite; 
+        -webkit-animation:logo 7s infinite; 
     }
      
     @-webkit-keyframes logo  {
-        0% {color: #30CFD0;}
+        0% {color: #30CFD0;} 
         50% {color: #330867;}
         100% {color: #30CFD0;}
     }

@@ -242,7 +242,7 @@ header {
   header h1 {
     white-space: nowrap;
     font-family: 'Orbitron', sans-serif;
-    -webkit-animation: logo 10s infinite; }
+    -webkit-animation: logo 7s infinite; }
 
 @-webkit-keyframes logo {
   0% {
